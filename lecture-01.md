@@ -1,9 +1,5 @@
 CS401, Machine Learning
 =======================
-
-Instructor: Prof Barak A. Pearlmutter
-
-Office: Computer Science, Ugly New Building room 132
  
 Three types of machine learning
 -------------------------------
