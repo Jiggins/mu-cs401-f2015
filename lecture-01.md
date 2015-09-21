@@ -39,12 +39,12 @@ Example: Tank recognition in an image
 
 data
 ----
-    input				desired output
-    -----               --------------
-    image 1			    yes
-    ...                 ...
-	image M			    no
 
+input   | desired output
+-----   | --------------
+image 1 | yes
+...     | ...
+image M | no
 
 Image → [Machine] → Classification, class label, or probability
 
