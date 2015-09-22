@@ -1,12 +1,12 @@
-CS401, Machine Learning
+CS401 Machine Learning & Neural Networks
 =======================
  
-Three types of machine learning
+Three main types of Machine Learning
 -------------------------------
 
-* Supervised learning (regression)
-* Unsupervised learning (figure out structure, data mining)
-* Reinforcement learning
+* Supervised Learning (regression)
+* Unsupervised Learning (figure out structure, data mining)
+* Reinforcement Learning
 
 Wellsprings of Machine Learning
 -------------------------------
@@ -105,3 +105,5 @@ Assignment:
 * Soon we'll get an assignment.
 * Grade each others' (double blind) to make a sparse matrix.
 * Use this as a dataset for some interesting problems.
+
+<!-- These notes are a lot more concise than the ones I took, I honestly don't have anything relevant to add. -->
