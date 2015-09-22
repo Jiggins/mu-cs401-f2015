@@ -103,5 +103,5 @@ Assignment:
 ===========
 
 * Soon we'll get an assignment.
-* Grade each others (double blind) to make a sparse matrix.
+* Grade each others' (double blind) to make a sparse matrix.
 * Use this as a dataset for some interesting problems.
