@@ -84,11 +84,11 @@ Gradient descent using this sample error average:
 Stochastic gradient descent
 ***
 
-> w(t+1) = w(t) - ζ<∇<sub>w</sub>Ê> 
+> w(t+1) = w(t) - η<∇<sub>w</sub>Ê> 
 
-If ζ(t) ~= <sup>1</sup>/<sub>t</sub>, the algorithm is guaranteed to converge to a local minimum. However, we must constrain ζ(t) like so:
+If η(t) ~= <sup>1</sup>/<sub>t</sub>, the algorithm is guaranteed to converge to a local minimum. However, we must constrain η(t) like so:
 
->O(<sup>1</sup>/<sub>t<sup>2</sup></sub>) < ζ(t) ≤ O(<sup>1</sup>/<sub>t</sub>)
+>O(<sup>1</sup>/<sub>t<sup>2</sup></sub>) < η(t) ≤ O(<sup>1</sup>/<sub>t</sub>)
 
 The SGD algorithm will yield increasingly better results after a 'warm up' period.
 
@@ -96,7 +96,7 @@ We add what we've gathered to a diagram of a perceptron.
 
 [Diagram here]
 
->s(φ) = <sup>1</sup>/<sub>1+e<sup>-ζ</sup></sub>
+>s(φ) = <sup>1</sup>/<sub>1+e<sup>-φ</sup></sub>
 
 1) This equation can be considered as a good approximation for current spiking in a biological neuron
 
@@ -105,13 +105,13 @@ We add what we've gathered to a diagram of a perceptron.
 
 > <sup>dÊ</sup>/<sub>dw<sub>k</sub></sub> =<strike> <sup>1</sup>/<sub>2</sub> . 2 </strike> (ŷ - y) . s<sup>'</sup>(w.x)x<sub>k</sub>
 
-> w<sub>k</sub>(t+1) = w<sub>k</sub>(t) - ζ(ŷ - y)s<sup>'</sup>(w . x))x<sub>k</sub>
+> w<sub>k</sub>(t+1) = w<sub>k</sub>(t) - η(ŷ - y)s<sup>'</sup>(w . x))x<sub>k</sub>
 
 > ∴
 
->  w<sub>k</sub>(t+1) =  w<sub>k</sub>(t) - ζ(ŷ - y) s<sup>'</sup> (w . x) x<sub>k</sub>
+>  w<sub>k</sub>(t+1) =  w<sub>k</sub>(t) - η(ŷ - y) s<sup>'</sup> (w . x) x<sub>k</sub>
 
-ζ is considered as our learning rate. The larger the value for ζ the more stable the system is.????
+η is considered as our learning rate. The smaller the value for η the more stable the system is.
 
 
 > (s<sup>'</sup>(φ) = s(φ)(1-s(φ)) <--- Epidemic equation)
@@ -126,7 +126,7 @@ The error function defined below is called the Cross-Entropy function. This matc
 > E =  -(y log ŷ + (1-y)log(1-ŷ))
 
 > Minimum ŷ = y
-> If y = 0 and ŷ = 1 then (something) tends to infinity
+> If y = 0 as ŷ tends 1 then E tends to infinity
 
 In semi linear systems we can define our output ŷ as being a probability of truth
 
