@@ -25,7 +25,7 @@ Machine Learning Tree
 
 > < x <sup>T</sup> x > w = < xy<sup>T</sup> >
 
-> (ɛ<sub>1</sub>I + <x<sup>T</sup>x> w) = <xy<sup>t</sup>>
+> (ɛI + < x <sup>T</sup>x> w) = < xy<sup>t</sup>>
 
 The above is a more robust error measure (Used mainly by statisticians)
 
