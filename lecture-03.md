@@ -56,11 +56,11 @@ As is, it's great for finding the minimum for flat curves in the weight-space. H
 
 We undergo a process of iteration in order to find the local minima.
 
->w(t+1) = w(t) - ζ∇<sub>w</sub>E
+>w(t+1) = w(t) - η∇<sub>w</sub>E
 
->where ζ > 0
+>where η > 0
 
-The function above is known as a naïve gradient descent as we only select one value for ζ. A better implementations would have more values for ζ as we descend.
+The function above is known as a naïve gradient descent as we only select one value for η. A better implementations would have more values for η as we descend.
 > E = <sup>1</sup>/<sub>2</sub> < ||ŷ - y||<sup>2</sup> >
 
 > ∇<sub>w</sub>E = < <sup>1</sup>/<sub>2</sub> ∇<sub>w</sub> ||ŷ - y||<sup>2</sup> > <- ŷ = f(x;w)
