@@ -15,3 +15,8 @@ Administrative Matters
 * Markdown format.
 * In git, on github.
 * Feel free to help with notes (fix typos as you read), send pull requests, etc.
+
+Instructional Materials
+-----------------------
+
+* http://deeplearning.net/tutorial/
