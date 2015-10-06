@@ -11,7 +11,7 @@ http://github.com/barak/mu-cs401-f2015
 Administrative Matters
 ----------------------
 
-Scribes for notes.
-Markdown format.
-In git, on github.
-Feel free to help with notes, send pull requests, etc.
+* Scribes for notes.
+* Markdown format.
+* In git, on github.
+* Feel free to help with notes (fix typos as you read), send pull requests, etc.
