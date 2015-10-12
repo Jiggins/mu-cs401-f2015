@@ -45,7 +45,7 @@ Humans could decipher these flaws easily
 Big courses were created out in desert for those autonomous vehicles
 
 ##Back-Propagation Method
-* Dean Pomerleau (Barak's friend)  
+* Dean Pomerleau (while PhD student at CMU)
   Slapped a camera and laser range on the vehicles
 * Early days of back-propagation
   
