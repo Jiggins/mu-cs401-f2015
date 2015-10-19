@@ -12,9 +12,9 @@ It is not an abrupt transition like letting a table falling.
 We have for a pendulum:
 F(x) = - c*x, where F is the force on the pendulum , x is the distance for minimum energy position. 
 
-E(x)= ∫<sup> x </sup><sub> 0 </sub> F(s) ds
-= -c∫ <sup> x </sup> <sub> 0 </sub> s ds
-= -c s<sup> 2</sup> / 2 |<sup> x </sup> <sub> 0 </sub>
+E(x)= ∫<sup> x </sup><sub>0</sub> F(s) ds
+= -c∫ <sup> x </sup> <sub>0</sub> s ds
+= -c s<sup> 2</sup> / 2 |<sup> x </sup> <sub>0</sub>
 =1/2 c x <sup> 2 </sup>
 
 In a discrete system we have the following formula for gradient descent:
@@ -61,43 +61,43 @@ letting η= 1/c will give us the fatest possible convergence of the gradient.
 ## 2 Dimensional DeCoupled situation
 For this situation we have the following Energy formula:
 
-E= 1/2 c<sub> 1</sub> w<sub> 1</sub><sup> 2</sup>+1/2 c<sub> 2</sub> w<sub> 2</sub><sup> 2</sup>.
+E= 1/2 c<sub>1</sub> w<sub>1</sub><sup> 2</sup>+1/2 c<sub>2</sub> w<sub>2</sub><sup> 2</sup>.
 
-Since 1/2 c<sub> 1</sub> w<sub> 1</sub> <sup> 2</sup> and 1/2 c<sub> 2</sub> w<sub> 2</sub><sup> 2</sup> are independent of one another, the system is said to be decoupled.
+Since 1/2 c<sub>1</sub> w<sub>1</sub> <sup> 2</sup> and 1/2 c<sub>2</sub> w<sub>2</sub><sup> 2</sup> are independent of one another, the system is said to be decoupled.
 
 We will assume only 1 value of η can be picked.
 
 
 w=(w1, w2)
 
-∇<sub>w</sub>E= (d/dw<sub> 1</sub> (E) , d/dw<sub> 2</sub>(E))
-= (c<sub> 1</sub> w<sub> 1</sub>,c <sub> 2</sub> w <sub> 2</sub>)
+∇<sub>w</sub>E= (d/dw<sub>1</sub> (E) , d/dw<sub>2</sub>(E))
+= (c<sub>1</sub> w<sub>1</sub>,c <sub>2</sub> w <sub>2</sub>)
 
 Looking at the formula w(t+1)= w(t)- η∇<sub>w</sub>E, we get the independent equations:
 
-w<sub> 1</sub> (t+1)= w<sub> 1</sub>(t)- ηc<sub> 1</sub> w<sub> 1</sub>(t)
+w<sub>1</sub> (t+1)= w<sub>1</sub>(t)- ηc<sub>1</sub> w<sub>1</sub>(t)
 
 
-w<sub> 2</sub> (t+1)= w<sub> 2</sub>(t)- ηc<sub> 2</sub> w<sub> 2</sub>(t)
+w<sub>2</sub> (t+1)= w<sub>2</sub>(t)- ηc<sub>2</sub> w<sub>2</sub>(t)
 
-and the constraints that η < 2/c<sub> 1</sub> and η < 2/c<sub> 2</sub>
-=> η < 2/max(c<sub> 1</sub>,c<sub> 2</sub>).
+and the constraints that η < 2/c<sub>1</sub> and η < 2/c<sub>2</sub>
+=> η < 2/max(c<sub>1</sub>,c<sub>2</sub>).
 
 We can rewrite the formulas above as:
-w<sub> 1</sub> (t)= ( 1- ηc<sub> 1</sub>)<sup> t</sup> w<sub> 1</sub>(0) and
+w<sub>1</sub> (t)= ( 1- ηc<sub>1</sub>)<sup> t</sup> w<sub>1</sub>(0) and
 
-w<sub> 2</sub> (t)= ( 1- ηc<sub> 1</sub>)<sup> t</sup> w<sub> 2</sub>(0)
+w<sub>2</sub> (t)= ( 1- ηc<sub>1</sub>)<sup> t</sup> w<sub>2</sub>(0)
 
 
-Let c<sub> 1</sub> < c<sub> 2</sub> then η < 2/c<sub> 2</sub> 
+Let c<sub>1</sub> < c<sub>2</sub> then η < 2/c<sub>2</sub> 
 
-Set η= 1/c <sub> 2</sub>
+Set η= 1/c <sub>2</sub>
 
-w<sub> 2</sub> (t)=0 and
+w<sub>2</sub> (t)=0 and
 
-w<sub> 1</sub> (t)= ( 1- c<sub> 1</sub>/c<sub> 2</sub> )<sup> t</sup> w<sub> 1</sub>(0)
+w<sub>1</sub> (t)= ( 1- c<sub>1</sub>/c<sub>2</sub> )<sup> t</sup> w<sub>1</sub>(0)
 
-Since 1-c<sub> 1</sub>/c<sub> 2</sub>  will be close to 1, then you have to raise t to a very high power to find the optimum gradient. That ratio max(c1,c2)/max(c1,c2) is called the convergence limit and it setermines the speed of learning. 
+Since 1-c<sub>1</sub>/c<sub>2</sub>  will be close to 1, then you have to raise t to a very high power to find the optimum gradient. That ratio max(c1,c2)/max(c1,c2) is called the convergence limit and it setermines the speed of learning. 
 
 However a decoupled situation is not very realistic and most situations are non-quadratic. However near the optimum it looks quadratic.
 
@@ -122,12 +122,12 @@ Diagonal Matrices are easy to work with. We can choose a new coordinate system (
 ∇E(w\* + Δw)= H Δw+ o(|| Δw||<sup> 2</sup>)
 =>∇E(w\* + Δw)≅ H Δw
 
-Let v<sub> i</sub> be a eigenvector of H then Hv<sub> i</sub>= λ<sub> i</sub>v<sub> i</sub> and we can express Δw in the eigenbasis:
+Let v<sub>i</sub> be a eigenvector of H then Hv<sub>i</sub>= λ<sub>i</sub>v<sub>i</sub> and we can express Δw in the eigenbasis:
 
-Δw=  Σ  b<sub> i</sub>v<sub> i</sub>
+Δw=  Σ  b<sub>i</sub>v<sub>i</sub>
 
-Then HΔw= H Σ  b<sub> i</sub>v<sub> i</sub>= Σ  b<sub> i</sub>H v<sub> i</sub>= Σ  b<sub> i</sub>λ<sub> i</sub> v<sub> i</sub>
+Then HΔw= H Σ  b<sub>i</sub>v<sub>i</sub>= Σ  b<sub>i</sub>H v<sub>i</sub>= Σ  b<sub>i</sub>λ<sub>i</sub> v<sub>i</sub>
 
-Hence the formula for b<sub> i</sub>(t+1)=λ<sub> i</sub>(t)- η λ<sub> i</sub> b<sub> i</sub>(t) with η< 2/max (λ<sub> i</sub>)
+Hence the formula for b<sub>i</sub>(t+1)=λ<sub>i</sub>(t)- η λ<sub>i</sub> b<sub>i</sub>(t) with η < 2/max (λ<sub>i</sub>)
 
-The condition number is λ<sub> max</sub>/ λ<sub> min</sub>
+The condition number is λ<sub>max</sub>/ λ<sub>min</sub>
