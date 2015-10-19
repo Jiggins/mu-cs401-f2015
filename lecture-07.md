@@ -53,8 +53,8 @@ The limitation on  η:
 
 we must have |1- cη|<1 otherwise it would  grow and not would not have convergence of the gradient.  From |1- cη|<1 we get that
 -1< 1- cη
-=> -2<cη
-=> η < 2/c , which is called the limit of conversion.
+⇒ -2<cη
+⇒ η < 2/c , which is called the limit of conversion.
 
 letting η= 1/c will give us the fatest possible convergence of the gradient.
 
@@ -81,7 +81,7 @@ w<sub>1</sub> (t+1)= w<sub>1</sub>(t)- ηc<sub>1</sub> w<sub>1</sub>(t)
 w<sub>2</sub> (t+1)= w<sub>2</sub>(t)- ηc<sub>2</sub> w<sub>2</sub>(t)
 
 and the constraints that η < 2/c<sub>1</sub> and η < 2/c<sub>2</sub>
-=> η < 2/max(c<sub>1</sub>,c<sub>2</sub>).
+⇒ η < 2/max(c<sub>1</sub>,c<sub>2</sub>).
 
 We can rewrite the formulas above as:
 w<sub>1</sub> (t)= ( 1- ηc<sub>1</sub>)<sup>t</sup> w<sub>1</sub>(0) and
@@ -97,30 +97,29 @@ w<sub>2</sub> (t)=0 and
 
 w<sub>1</sub> (t)= ( 1- c<sub>1</sub>/c<sub>2</sub> )<sup>t</sup> w<sub>1</sub>(0)
 
-Since 1-c<sub>1</sub>/c<sub>2</sub>  will be close to 1, then you have to raise t to a very high power to find the optimum gradient. That ratio max(c1,c2)/max(c1,c2) is called the convergence limit and it setermines the speed of learning. 
+Since 1-c<sub>1</sub>/c<sub>2</sub>  will be close to 1, then you have to raise t to a very high power to find the optimum gradient. That ratio max(c<sub>1</sub>,c<sub>2</sub>)/max(c<sub>1</sub>,c<sub>2</sub>) is called the convergence limit and it setermines the speed of learning. 
 
 However a decoupled situation is not very realistic and most situations are non-quadratic. However near the optimum it looks quadratic.
 
 ## 2D Coupled situation
 In this scenairo we will use Taylor series around the point w*, the point at which the maximum gradient is.
 
-E(w\*+ Δw)= E(w *)+0+  1/2 (Δw)<sup>T</sup>  ∇<sup>2</sup><sub>w</sub>E(Δw)+ O(||(Δw)||<sup>2</sup>.
+E(w\*+ Δw) = E(w *) + 0 + 1/2 Δw<sup>T</sup> ∇<sup>2</sup><sub>w</sub>E(Δw) + O(⏸Δw⏸<sup>3</sup>).
 
-we get 0 as the second term since  ∇<sub>w</sub>E=0 at w*
+we get 0 as the second term since  ∇<sub>w</sub>E = 0 at w\*
 
-
-Set H= ∇<sup>2</sup><sub>w</sub>E
+Set H = ∇<sup>2</sup><sub>w</sub>E
 
 For the previous decoupled situation we have:
 
-H = [[∂<sup>2</sup>E/∂w<sub>1</sub><sup>2</sup>, ∂<sup>2</sup>E/∂w<sub>1</sub>∂w<sub>2</sub>], [∂<sup>2</sup>E/∂w<sub>2</sub><sup>2</sup>, ∂<sup>2</sup>E/∂w<sub>2</sub>∂w<sub>2</sub>]] = [[c1,0],[0,c2]], that is, the 2x2 diagonal matrix with c1 and c2 along the main diagonal.
+H = [[∂<sup>2</sup>E/∂w<sub>1</sub><sup>2</sup>, ∂<sup>2</sup>E/∂w<sub>1</sub>∂w<sub>2</sub>], [∂<sup>2</sup>E/∂w<sub>2</sub><sup>2</sup>, ∂<sup>2</sup>E/∂w<sub>2</sub>∂w<sub>2</sub>]] = [[c<sub>1</sub>,0],[0,c<sub>2</sub>]], that is, the 2×2 diagonal matrix with c<sub>1</sub> and c<sub>2</sub> along the main diagonal.
 
-Hence 1/2 Δw<sup>T</sup> H Δw = 1/2 Σ<sub>i</sub> Σ<sub>j</sub> (∂<sup>2</sup>E/∂w<sub>i</sub>∂w<sub>j</sub> Δw<sub>i</sub> Δw<sub>j</sub>.
+Hence 1/2 Δw<sup>T</sup> H Δw = 1/2 Σ<sub>i</sub> Σ<sub>j</sub> ∂<sup>2</sup>E/∂w<sub>i</sub>∂w<sub>j</sub> Δw<sub>i</sub> Δw<sub>j</sub>.
 
 Diagonal Matrices are easy to work with. We can choose a new coordinate system (a new basis) such that we always get a diagonal matrix through the use of eigenvectors.
 
-∇E(w\* + Δw)= H Δw+ o(|| Δw||<sup>2</sup>)
-=> ∇E(w\* + Δw)≅ H Δw
+∇E(w\* + Δw)= H Δw + O(⏸Δw⏸<sup>2</sup>)
+⇒ ∇E(w\* + Δw)≅ H Δw
 
 Let v<sub>i</sub> be a eigenvector of H then Hv<sub>i</sub> = λ<sub>i</sub> v<sub>i</sub> and we can express Δw in the eigenbasis:
 
