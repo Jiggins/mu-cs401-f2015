@@ -6,7 +6,7 @@ When we are close enough to the optimum the formula becomes quadratic and conver
 
 Grading descent equation from previous lectures:
 
-> w(t+1) = w(t) - η∇E (where η is learning rate)
+> w(t+1) = w(t) - η ∇E (where η is learning rate)
 
 Depending on our chosen learning rate we can have different outcomes:
 
@@ -21,13 +21,13 @@ c) well chosen convergence rate will converge and do so reasonably quickly
 To obtain such optimal learning rate we will introduce new variable - α, for momentum, such that
 
 
-> 0 ≤ α ≤ 1
+> 0 ≤ α < 1
 
 (at zero we have no momentum at all, and at 1 momentum will not stop at the minimum, we need some friction to slow it down once we've reached our goal)
 
 If we add this new factor our formula becomes:
 
-> w(t+1) = w(t) - η∇E + α(w(t) - w(t-1))
+> w(t+1) = w(t) - η ∇E + α (w(t) - w(t-1))
 
 Simplify:
 
@@ -35,9 +35,9 @@ Simplify:
 
 Rewrite w(t+1) - w(t) as Δw(t) and substitute it into the formula above:
 
-> Δw(t) = - η∇E + α(Δw(t-1))
+> Δw(t) = - η ∇E + α Δw(t-1)
 
-where η has to be < 2 / λ<sub>max</sub>
+where for stability η < 2 / λ<sub>max</sub>
 
 There has to be a balance in setting the momentum to apply optimally to both λ<sub>max</sub> and λ<sub>min</sub>. If λ<sub>max</sub> is a lot bigger than λ<sub>min</sub> we calculate momentum using the following formula:
 
@@ -51,22 +51,24 @@ There has to be a balance in setting the momentum to apply optimally to both λ<
 
 if α is too high it would affect our λ<sub>max</sub> which will have it overshoot the minimum.
 
-However,in practice, for big data sets there are too many calculations to use batch grading descent. 
+However, in practice, for big data sets there are too many calculations to use batch grading descent. 
 Instead, another option is to use stochastic grading descent:
 
-> Δw(t) = - η∇Ê 
+> Δw(t) = - η ∇Ê 
 
-(where Ê is ∇E plus some bounded amount of noise)
+(where Ê is ∇E plus some bounded amount of zero-mean noise)
 
 - η has to go to zero, slowly enough that we can get rid of the noise.
 
-> Σ<sub>(</sub><sub>t</sub><sub> </sub> <sub>to</sub> <sub> </sub> <sub>infinity</sub><sub>)</sub>η(t) = infinity 
+> Σ<sub>t=1..∞</sub> η(t) = ∞ 
 
 (to have enough momentum), but also, for descent to be fast enough
 
-> Σ<sub>(</sub><sub>t</sub><sub>=</sub><sub>0</sub><sub> </sub> <sub>to</sub> <sub> </sub> <sub>infinity</sub><sub>)</sub>η(t)<sup>2</sup> < infinity:
+> Σ<sub>t=1..∞</sub> η(t)<sup>2</sup> < ∞:
 
-> O(1/sqrt t) < η(t) ≤ O(1/t)
+so
+
+> O(1/√t) < η(t) ≤ O(1/t)
 
 In practice stochastic descent is not used either. We can't always get an optimum, for an algorithm that uses real life changing data a good approximation is what we aim for.
 
