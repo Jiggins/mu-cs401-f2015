@@ -18,38 +18,38 @@ b) learning rate is too small, convergence will happen but this will be a slow p
 
 c) well chosen convergence rate will converge and do so reasonably quickly
 
-To obtain such optimal learning rate we will introduce new variable - alpha, for momentum, such that
+To obtain such optimal learning rate we will introduce new variable - α, for momentum, such that
 
 
-> 0 <= alpha <= 1
+> 0 ≤ α ≤ 1
 
 (at zero we have no momentum at all, and at 1 momentum will not stop at the minimum, we need some friction to slow it down once we've reached our goal)
 
 If we add this new factor our formula becomes:
 
-> w(t+1) = w(t) - η∇E + alpha(w(t) - w(t-1))
+> w(t+1) = w(t) - η∇E + α(w(t) - w(t-1))
 
 Simplify:
 
-> w(t+1) - w(t) = - η∇E + alpha(w(t) - w(t-1))
+> w(t+1) - w(t) = - η∇E + α(w(t) - w(t-1))
 
 Rewrite w(t+1) - w(t) as Δw(t) and substitute it into the formula above:
 
-> Δw(t) = - η∇E + alpha(Δw(t-1))
+> Δw(t) = - η∇E + α(Δw(t-1))
 
 where η has to be < 2 / λ<sub>max</sub>
 
 There has to be a balance in setting the momentum to apply optimally to both λ<sub>max</sub> and λ<sub>min</sub>. If λ<sub>max</sub> is a lot bigger than λ<sub>min</sub> we calculate momentum using the following formula:
 
-> Δb<sub>min</sub> = - η∂E/∂b<sub>min</sub> + alphaΔb<sub>min</sub>
+> Δb<sub>min</sub> = - η∂E/∂b<sub>min</sub> + αΔb<sub>min</sub>
 
-> Δb<sub>min</sub> - alphaΔb<sub>min</sub> = - η∂E/∂b<sub>min</sub>
+> Δb<sub>min</sub> - αΔb<sub>min</sub> = - η∂E/∂b<sub>min</sub>
 
-> (1 - alpha)Δb<sub>min</sub>  = - η∂E/∂b<sub>min</sub>
+> (1 - α)Δb<sub>min</sub>  = - η∂E/∂b<sub>min</sub>
 
-> Δb<sub>min</sub> = - η/(1 - alpha)∂E/∂b<sub>min</sub>
+> Δb<sub>min</sub> = - η/(1 - α)∂E/∂b<sub>min</sub>
 
-if alpha is too high it would affect our λ<sub>max</sub> which will have it overshoot the minimum.
+if α is too high it would affect our λ<sub>max</sub> which will have it overshoot the minimum.
 
 However,in practice, for big data sets there are too many calculations to use batch grading descent. 
 Instead, another option is to use stochastic grading descent:
@@ -66,7 +66,7 @@ Instead, another option is to use stochastic grading descent:
 
 > Σ<sub>(</sub><sub>t</sub><sub>=</sub><sub>0</sub><sub> </sub> <sub>to</sub> <sub> </sub> <sub>infinity</sub><sub>)</sub>η(t)<sup>2</sup> < infinity:
 
-> O(1/sqrt t) < η(t) <= O(1/t)
+> O(1/sqrt t) < η(t) ≤ O(1/t)
 
 In practice stochastic descent is not used either. We can't always get an optimum, for an algorithm that uses real life changing data a good approximation is what we aim for.
 
