@@ -1,15 +1,13 @@
 20/10/2015
 > (ɛI + < x <sup>T</sup>x> w) = < xy<sup>t</sup>>
 
-> (ɛI + < x <sup>T</sup>x> w) = < xy<sup>t</sup>>
-
-GRAPH - ML Studied
 #Support Vector Machine (SVM)
-Last Lecture: max margin examples(? - lookup wiki)
-Soft margin
+<b>Last Lecture</b>: Maximum margin problems
+* Introduction of soft margin  
+When there is mislabeled data; a hyperplane is introduced to cleanly split data and maximise margin distance
 
-Problem based on linear classification
-Margin straightforward to calculate in linear case but not when the problem's nonlinear (?)
+* Problem based on linear classification  
+Margin is straightforward to calculate in linear case but not when the problem's nonlinear:
 
 ![Non-linear margin] (http://www.blaenkdenum.com/images/notes/machine-learning/support-vector-machines/x-space-non-linear-svm.png)
 
@@ -17,10 +15,10 @@ Margin straightforward to calculate in linear case but not when the problem's no
 * Map observations to a higher dimensional space using a <b>Kernel Function</b>:  
 ![Kernel Function](https://upload.wikimedia.org/math/9/c/b/9cbd072b356b4cb62afceef088c751dd.png)
 
-e.g. <pre>φ: ℝ<sup>10<sup>6</sup></sup>⟼ ℝ<sup>10<sup>100</sup></sup></pre>
-
-
-Intractable - heard to calculate by itself
+φ(x) - Intractable (heard to calculate by itself)
+<sup>1</sup>/<sub>10</sub>
+e.g.  
+<pre>φ: ℝ<sup>10<sup>6</sup></sup>⟼ ℝ<sup>10<sup>100</sup></sup></pre>
 
 Analogy - Think of it as a GPU where you can hold input vector (not allowed touch it in GPU)
 
@@ -33,10 +31,12 @@ Instead of operating in input space - change x's to φ(x<sup>i</sup>)
 
 MATH penetration variables(penetrate margins)
 <pre>
-Minimise<sub>(ω,θ,ξ)</sub> ‖ω‖<sup>2</sup> + cΣ<sub>i</sub>(ξ<sub>i</sub>)
-Subject to:
-y<sup>(i)</sup>(ω·x<sup>(i)</sup> - θ) ≥ 1 - ξ<sub>i</sub>
-And: ξ<sub>i</sub> ≥ 0
+Minimise<sub>(ω,θ,ξ)</sub>  
+              <sup>1</sup>/<sub>2</sub>‖ω‖<sup>2</sup> + cΣ<sub>i</sub>(ξ<sub>i</sub>)
+Subject to:  
+              y<sup>(i)</sup>(ω·x<sup>(i)</sup> - θ) ≥ 1 - ξ<sub>i</sub>
+And:  
+ξ<sub>i</sub> ≥ 0
 </pre>
 Math Breakdown:
 <pre> ω= Σ<sub>i</sub>(α<sub>i</sub>y<sup>(i)</sup>φ(x<sup>(i)</sup>)
@@ -80,9 +80,9 @@ takes O(n) work in n-space
 </pre>
 
 ###Polynomial Kernel
-For degree-d polynomials, the polynomial kernel is defined as:
-![polynomial kernel] (https://upload.wikimedia.org/math/e/0/e/e0e6e2ac260502f8818fb8c55cec2227.png)
-where x and y are vectors in the input space
+For degree-d polynomials, the polynomial kernel is defined as:  
+![polynomial kernel] (https://upload.wikimedia.org/math/e/0/e/e0e6e2ac260502f8818fb8c55cec2227.png)  
+where x and y are vectors in the input space and c ≥ 0 is a free parameter trading off the influence of higher-order versus lower-order terms in the polynomial.
 
 <pre>φ: ℝ<sup>n</sup>⟼ ℝ<sup>n<sup>p</sup>/≈p!</sup></pre>
 
