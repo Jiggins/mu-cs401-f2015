@@ -65,15 +65,22 @@ And:
 
 * Dual representation (α) used for quadratic programming problems as opposed to primal representation (ω)
 
-##Kernel Function (Suggestions)
-<b>Mercer's Theorem</b>
-Suppose K is a continuous symmetric<pre>k(u, v) = k(v, u)</pre>. non-negative definite kernel.![non-negative deifinitive kernel](https://upload.wikimedia.org/math/7/9/e/79e0f0a14643312d46347a004e688ef7.png)
-for all finite sequences of points x<sub>1</sub>, ..., x<sub>n</sub> of [a, b] and all choices of real numbers c1, ..., cn
+##Kernel Function
+####Mercer's Theorem
+<b>Pre-condition:</b>  
+If k is <i>symmetric:</i>   
+<pre>k(u, v) = k(v, u)</pre>
+,<i>non-negative definite</i>:  
+![non-negative definite kernel] (https://upload.wikimedia.org/math/7/9/e/79e0f0a14643312d46347a004e688ef7.png)  
+for all finite sequences of points x<sub>1,...,</sub> x<sub>n</sub> of [a, b] and all choices of real numbers c<sub>1,...,</sub> c<sub>n</sub>  
+<b>Post-condition:</b>  
+<pre>⇒  ∃ φ s.t. k(u,v)=φ(u)·(v)</pre>
 
-Examples
+<b>Examples:</b>  
 Identity Kernel:
 <pre> k(u,v)=u·v</pre>  
-takes O(n) work in n-space
+* takes O(n) work in n-space  
+
 <pre> k(u,v) = (u·v)<sup>2</sup>
 
           = (Σ<sub>k</sub>(u<sub>k</sub>v<sub>k</sub>))<sup>2</sup>
@@ -93,49 +100,52 @@ where x and y are vectors in the input space and c ≥ 0 is a free parameter tra
 
 <pre>φ: ℝ<sup>n</sup>⟼ ℝ<sup>n<sup>p</sup>/≈p!</sup></pre>
 
-MATH
-MATH
+* When we used quadratic kernel we dropped all linear terms
 
-*When we used quadratic kernel we dropped all linear terms
-MATH
-*No arguments about using kernel functions as you can always use them both (add them up)
-Example
+* No arguments about which kernel function to use as you can always use them both (add them up)
+Example:  
+
 <pre> k(u,v) = (u·v + 1)<sup>2</sup>
 
         = (Σ<sub>k</sub>u<sub>k</sub>v<sub>k</sub> + 1)(Σ<sub>k<sup>'</sup></sub>u<sub>k<sup>'</sup></sub>v<sub>k<sup>'</sup></sub> + 1)
         
-        = Σ<sub>k,k<sup>'</sup></sub>u<sub>k</sub>u<sub>k<sup>'</sup></sub>(v<sub>k</sub>v<sub>k<sup>'</sup></sub> + 2Σ<sub>k</sub>u<sub>k</sub>v<sub>k</sub> + 1
+        = Σ<sub>k,k<sup>'</sup></sub>u<sub>k</sub>u<sub>k<sup>'</sup></sub>v<sub>k</sub>v<sub>k<sup>'</sup></sub> + 2Σ<sub>k</sub>u<sub>k</sub>v<sub>k</sub> + 1
 </pre>     
-MATH
 
-##Kernel Example which may work for images (finding similarities(?))
-MATH - Gaussian Kernel
-Fee for using this: Goes to infinite dimensions
+##Gaussian Process
+* <b>Gaussian Kernel</b>:  
+<pre>k(u,v) = e<sup>-d|u-v|<sup>2</sup></sup></pre>
+* Can be used to compute similarities between images
+* Fee for using this: maps to infinite dimensions
 
-MATH
-kernels: measure similarity
 ##Kernel Function applications
-What editing operation do I have to do to make two pieces of text the same?
+* Find similarities between two pieces of text
 
-*When we finished with optimisation
-Problem: there were no x's left, just i's,j's
+*When we finished the optimisation above:  
+Problem: there were no x's left, just i's and j's
 
-When we want to embed SVM in your system (sneeze function in camera)
-MATH
-MATH
-MATH
+When we want to embed SVM in your system (sneeze function in camera):
+<pre>ω·φ(x)⩼ θ
 
-Just download into camera the inputs from training set
-Only need to store support vectors of people sneezing
-e.g. 200/100 training cases
+Σ(α<sub>i</sub>y<sup>(i)</sup>φ(x<sup>(i)</sup>)·φ(x))
+=Σ<sub>(s.t. α<sub>i</sub>≠0)</sub>(α<sub>i</sub>y<sup>(i)</sup>k(x<sup>(i)</sup>,x))
 
-Popular kernels: quite robust
+most α<sub>i</sub> are zero!
+</pre>
+
+We only need to store the support vectors of people sneezing from the training set  
+Only download these into the camera:  
+e.g. <sup>200</sup>/<sub>1000</sub> training cases
+
+##SVM Conclusions
+Popular kernels: quite robust  
 -Reasons why people like SVM instead
 
-*Despite beautiful math (Kercher's...)
-SVM depends on number of support vectors (cool property) - work in higher-dimensional space as only looks at subset of vectors)
-Criticism: checking if
-MATH
--glorified template matching
+<b>Positives:</b> 
+* Beautiful Math (Kercher's...)
+* SVM depends on number of support vectors  
+  - can work in higher-dimensional space as only looks at subset of vectors
+* Turn Key  
 
-Advantage: Turn key etc.
+<b>Criticism:</b>
+* Glorified template matching
