@@ -1,14 +1,19 @@
 # Calculating the gradient 
 
 Numerical differentiation
-dE/dw = (E(w + hei) - E(w)) / h 
+dE/dw = (E(w + hei) - E(w)) / h
+
 where h = 1/10^9
 
-Efficiency - gradient has m components, so you would have to calculate the above m times. The time complexity would be O(cal. E).O(cal. m) - It is not efficient
+Efficiency - gradient has m components, so you would have to calculate the above m times. 
+Time complexity - O(cal. E).O(cal. m) - It is not efficient
 
 Working with floating point numbers:
+
 1) do not add very small and large numbers.
+
 	- The significant places of the smaller number can be cut off
+
 2) do not subtract numbers of similar sizes.
 
 The above method violates both these rules.
