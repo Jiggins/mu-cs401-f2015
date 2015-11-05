@@ -13,7 +13,7 @@ Administrative Matters
 
 * Scribes for notes.
 * Markdown format.
-* In git, on github.
+* In git, on GitHub.
 * Feel free to help with notes (fix typos as you read), send pull requests, etc.
 
 Instructional Materials
