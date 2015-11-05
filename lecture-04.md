@@ -3,7 +3,7 @@
 Numerical differentiation
 dE/dw = (E(w + hei) - E(w)) / h
 
-:<math>f'(x)=\lim_{h\to 0}{f(x+h)-f(x)\over h}.</math>
+f'(x)=lim{h->0} (f(x+h)-f(x))/h
 
 where h = 1/10^9
 
