@@ -19,13 +19,13 @@ e.g.
 * φ(x) - Intractable (heard to calculate by itself)  
   Analogy - GPU input vector which you cannot alter once it is being processed
 
-##Kernalise the Algorithm
+##Kernelize the Algorithm
 * Instead of operating in input space - change x's to φ(x<sup>i</sup>)'s to move to feature space
 
 <b>ω</b>: primal/single representation of the vector  
 <b>α</b>: dual representation of the vector  
 <b>ξ<sub>i</sub></b>: slack parameter  
-ω,θ,ξ -  penetration variables(penetrate margins)  
+ω,θ,ξ - penetration variables (penetrate margins)  
 y<sup>(i)</sup> = ±1 for either "yes"/"no" class of data points
 <pre>
 Minimise<sub>(ω,θ,ξ)</sub>  
@@ -53,7 +53,7 @@ Math Breakdown:
           
            = Σ<sub>j</sub>(α<sub>j</sub>y<sup>(j)</sup>k(x<sup>(i)</sup>,x<sup>(j)</sup>))
 </pre>
-###Kernalised Algorithm
+###Kernelized Algorithm
 <pre>
 Minimise<sub>(α,θ,ξ)</sub>  
               <sup>1</sup>/<sub>2</sub>α<sup>T</sup>(y<sup>(i)</sup>y<sup>(j)</sup>k<sub>i,j</sub>)<sub>i,j</sub> + cΣ<sub>i</sub>(ξ<sub>i</sub>)
@@ -74,7 +74,7 @@ If k is <i>symmetric:</i>
 ![non-negative definite kernel] (https://upload.wikimedia.org/math/7/9/e/79e0f0a14643312d46347a004e688ef7.png)  
 for all finite sequences of points x<sub>1,...,</sub> x<sub>n</sub> of [a, b] and all choices of real numbers c<sub>1,...,</sub> c<sub>n</sub>  
 <b>Post-condition:</b>  
-<pre>⇒  ∃ φ s.t. k(u,v)=φ(u)·(v)</pre>
+<pre>⇒ ∃ φ s.t. k(u,v)=φ(u)·(v)</pre>
 
 <b>Examples:</b>  
 Identity Kernel:

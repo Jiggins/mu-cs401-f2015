@@ -16,7 +16,7 @@ b) learning rate is too small, convergence will happen but this will be a slow p
 
 ![Choice of learning rate](http://sebastianraschka.com/Images_old/2015_singlelayer_neurons/perceptron_learning_rate.png)
 
-c) well chosen convergence rate will converge and do so reasonably quickly
+c) well-chosen convergence rate will converge and do so reasonably quickly
 
 To obtain such optimal learning rate we will introduce new variable - α, for momentum, such that
 
@@ -45,7 +45,7 @@ There has to be a balance in setting the momentum to apply optimally to both λ<
 
 > Δb<sub>min</sub> - αΔb<sub>min</sub> = - η∂E/∂b<sub>min</sub>
 
-> (1 - α)Δb<sub>min</sub>  = - η∂E/∂b<sub>min</sub>
+> (1 - α)Δb<sub>min</sub> = - η∂E/∂b<sub>min</sub>
 
 > Δb<sub>min</sub> = - η/(1 - α)∂E/∂b<sub>min</sub>
 
@@ -74,23 +74,22 @@ In practice stochastic descent is not used either. We can't always get an optimu
 
 All gradient descent methods are weak, it is much better to analytically find the optimum and just "jump" there.
 
-## Support Vector Machines(SVMs):
+## Support Vector Machines (SVMs):
 
 MLP require a lot of tuning. They are hard to implement and there's a lot of decisions that we have to make.
-New approach - SVM(developed by Vladimir Vapnik and his colleagues)
+New approach - SVM (developed by [Vladimir Vapnik]( https://en.wikipedia.org/wiki/Vladimir_Vapnik) and his colleagues)
 Some of the SVM logic can be added to MLPs to enhance their performance.
 Data example:
 
-![data example for fitting linear classifier](http://docs.opencv.org/_images/separating-lines.png)
+![data example for fitting linear classifier](images/lecture-08/separating-lines.png)
 
 For data like this we can fit many possible linear thresholds that will predict different values. If we had to choose one, we could find a place, such that:
 1) classifies data correctly
 2) positioned in such a way that the nearest square and the nearest circle are as far away from it as possible.
 
-![data example for fitting SV](http://docs.opencv.org/_images/optimal-hyperplane.png)
+![data example for fitting SV](images/lecture-08optimal-hyperplane.png)
 
 Its position depends solely on data points touching the margin (the support vectors).
 
 
 SVM - linear classifier with maximum margin. (The bigger the margin, the better)
-
