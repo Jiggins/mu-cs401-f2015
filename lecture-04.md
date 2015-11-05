@@ -15,7 +15,9 @@ The above method violates both these rules.
 
 ## Back Propogation
 Space: Takes up a lot of space.
+
 Operation Count: For each primitive function the derivitive must be calculated. At worst this will be a small constant vector more work.
+
 Exact: It is exact up to floating point issues.
 
 See Images/lecture-04 for descriptions of back propogation with unary and binary functions and functions which have one input and two outputs.
