@@ -3,6 +3,8 @@
 Numerical differentiation
 dE/dw = (E(w + hei) - E(w)) / h
 
+:<math>f'(x)=\lim_{h\to 0}{f(x+h)-f(x)\over h}.</math>
+
 where h = 1/10^9
 
 Efficiency - gradient has m components, so you would have to calculate the above m times. 
