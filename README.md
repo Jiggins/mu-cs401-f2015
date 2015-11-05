@@ -20,3 +20,4 @@ Instructional Materials
 -----------------------
 
 * http://deeplearning.net/tutorial/
+* https://github.com/hangtwenty/dive-into-machine-learning
