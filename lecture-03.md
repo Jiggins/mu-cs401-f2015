@@ -1,4 +1,5 @@
 
+
 Rosenblatt's perceptron
 
 Perceptron Research from the 50s and 60s
@@ -38,7 +39,7 @@ Another factor that would help in making the system robust would be the removal 
 
 Non-Linear Functions
 ====================
-We'll be moving on from using linear classifiers (Perceptrons) for machine learning to using streaming, non-linear functions. A use case for using these non-linear functions would be in the processing video clips. One training case for a 5 second clip would be ~20mb! Which would include around a million different vectorss for machine learning.
+We'll be moving on from using linear classifiers (Perceptrons) for machine learning to using streaming, non-linear functions. A use case for using these non-linear functions would be in the processing video clips. One training case for a 5 second clip would be ~20mb! Which would include around a million different vectors for machine learning.
 
 The < x <sup>T</sup> x > matrix space is in the order of O(n<sup>2</sup>)
 
@@ -109,7 +110,7 @@ We add what we've gathered to a diagram of a perceptron.
 
 > ∴
 
->  w<sub>k</sub>(t+1) =  w<sub>k</sub>(t) - η(ŷ - y) s<sup>'</sup> (w . x) x<sub>k</sub>
+> w<sub>k</sub>(t+1) = w<sub>k</sub>(t) - η(ŷ - y) s<sup>'</sup> (w . x) x<sub>k</sub>
 
 η is considered as our learning rate. The smaller the value for η the more stable the system is.
 
@@ -123,7 +124,7 @@ Semi linear systems
 
 The error function defined below is called the Cross-Entropy function. This matches well with s(φ).
 
-> E =  -(y log ŷ + (1-y)log(1-ŷ))
+> E = -(y log ŷ + (1-y)log(1-ŷ))
 
 > Minimum ŷ = y
 > If y = 0 as ŷ tends 1 then E tends to infinity
@@ -132,3 +133,4 @@ In semi linear systems we can define our output ŷ as being a probability of tru
 
 ##Logistic Regression
 Logistic regression can be defined as the combination of the Cross-Entropy error + Regression
+
