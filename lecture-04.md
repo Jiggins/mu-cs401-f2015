@@ -3,7 +3,11 @@
 Numerical differentiation
 dE/dw = (E(w + hei) - E(w)) / h
 
-f'(x)=lim{h->0} (f(x+h)-f(x))/h
+f'(x) = lim{h->0} ( f(x+h) - f(x) ) / h
+
+programming languages don't usually have a lim construct so let h be a small number
+
+f'(x) = ( f(x+h) - f(x) ) / h
 
 where h = 1/10^9
 
