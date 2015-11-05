@@ -33,9 +33,9 @@ Humans could decipher these flaws easily
 * First billion dollar company using Machine Learning
  
 ##Aside
-* Congress created a law to decrease false-negative pap smear rates
+* Congress created a law to decrease false-negative Pap smear rates
  
-#Alvinn
+#ALVINN (Autonomous Land Vehicle In a Neural Network)
  Push by US military to create autonomous vehicles  
  **Biggest concern:** convoys being attacked
  
@@ -50,7 +50,7 @@ Big courses were created out in desert for those autonomous vehicles
   Slapped a camera and laser range on the vehicles
 * Early days of back-propagation
   
-Pormerleau created a network:  
+Pomerleau created a network:  
 ![ALVINN Architecture](https://raw.githubusercontent.com/GooseyGooLay/Machine-Learing-Images/master/ALVINN%20Architecture.PNG)  
 *	8 horizontal scans of 30*32 images
 	The Range Finder returns distance of vehicle to the objects
@@ -58,14 +58,14 @@ Pormerleau created a network:
 * System returns what the steering direction should be  
 	Trained using Gaussian bump
 
-Alvinn: Shallow architecture (only one layer of hidden units)
+ALVINN: Shallow architecture (only one layer of hidden units)
 
 **Problem:** Road intensity feedback (Lightness of road compared to background)
 
 ###Aside
 Similar system used in Mars Rover project?  
 Tom Mathis worked on Mars Rover project also
-##Alvinn
+##ALVINN
 * **One trick:** Get training data right  
             	  -Drive vehicle down road correctly once
 	
@@ -98,7 +98,7 @@ Pomerleau: made **fake data** - moved road slightly to create new scenarios and 
 -Trip from San Fran to Seattle made by the autonomous vehicle  
 	(Human exerted control over steering at times needed)
 
-##Alvinn Influence
+##ALVINN Influence
 * **Google cars:** based on this model  
                 -new data available like GPS
 
@@ -115,7 +115,7 @@ Pomerleau: made **fake data** - moved road slightly to create new scenarios and 
 
 One criticism of this style of learning:
 * Similar to Black box: hard to figure out what's going on internally  
-                        (Will this system drive appropriately during an eclipse ?)
+                        (Will this system drive appropriately during an eclipse?)
 
 #RNN Handwriting Generator
 ![RNN Handwriting Generator Architecture] (https://raw.githubusercontent.com/GooseyGooLay/Machine-Learing-Images/master/RNN%20Handwriting%20Generator%20Architecture.PNG)
@@ -136,7 +136,7 @@ One criticism of this style of learning:
 ![Training vs. Testing] (http://i.stack.imgur.com/I7LiT.png)
 
 * Error should go monotonically downwards  
-  Only Care about cases which are expilicit (minimise one weight's significance and put emphasis on another)
+  Only Care about cases which are explicit (minimise one weight's significance and put emphasis on another)
 
 * Validation set should start out with standard error
 
@@ -148,4 +148,3 @@ One criticism of this style of learning:
 
 * Particular variables in training set which don't exist overall  
   -leaves us with error
-
