@@ -22,14 +22,14 @@ Working with floating point numbers:
 
 The above method violates both these rules.
 
-## Back Propogation
+## Back Propagation
 Space: Takes up a lot of space.
 
-Operation Count: For each primitive function the derivitive must be calculated. At worst this will be a small constant vector more work.
+Operation Count: For each primitive function the derivative must be calculated. At worst this will be a small constant vector more work.
 
 Exact: It is exact up to floating point issues.
 
-See Images/lecture-04 for descriptions of back propogation with unary and binary functions and functions which have one input and two outputs.
+See Images/lecture-04 for descriptions of back propagation with unary and binary functions and functions which have one input and two outputs.
 
 ## Disjoint Networks
-Have a series of networks computing the same problem. If they are all making the same predictions, the probabilty they are getting the correct result is higher then if they are making difference predictions.
+Have a series of networks computing the same problem. If they are all making the same predictions, the probability they are getting the correct result is higher than if they are making difference predictions.
