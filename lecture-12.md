@@ -34,9 +34,9 @@ How do we set these parameters properly?
 Consider a coin flipping machine, with a 0-1 probability parameter.
 The machine can either produce 0, for heads, or 1, for tails.
 
-It has a binary dataset (y1,....yn)
+It has a binary dataset (y1, ..., yn)
 
-And the machine outputs (ŷ1,....ŷn)
+And the machine outputs (ŷ1, ..., ŷn)
 
 In a dataset of ~100, the chances of ŷ = y is vanishing small.
 
@@ -46,12 +46,12 @@ Note that we can store vanishing small numbers as logarithm.
 
 If the machine has memory, then every coin flip will be like taking marbles from a bag, and not replacing them 
 
--> every previous result will effect the next result.
+-> every previous result will affect the next result.
 
 However, this is not how coin tosses work, every coin toss outcome is independent, so our machine has no memory.
 
 ##K-means
-K-means is an unsupervised learning algorithm, that classifies a given data set into clusters.
+K-means is an unsupervised learning algorithm that classifies a given data set into clusters.
 
 We can imagine the dataset is produced by a machine that will populate a graph with data.
 
