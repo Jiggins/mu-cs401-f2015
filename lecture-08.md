@@ -81,13 +81,13 @@ New approach - SVM(developed by Vladimir Vapnik and his colleagues)
 Some of the SVM logic can be added to MLPs to enhance their performance.
 Data example:
 
-![data example for fitting linear classifier](http://docs.opencv.org/_images/separating-lines.png)
+![data example for fitting linear classifier](images/lecture-08/separating-lines.png)
 
 For data like this we can fit many possible linear thresholds that will predict different values. If we had to choose one, we could find a place, such that:
 1) classifies data correctly
 2) positioned in such a way that the nearest square and the nearest circle are as far away from it as possible.
 
-![data example for fitting SV](http://docs.opencv.org/_images/optimal-hyperplane.png)
+![data example for fitting SV](images/lecture-08/optimal-hyperplane.png)
 
 Its position depends solely on data points touching the margin (the support vectors).
 
