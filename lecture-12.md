@@ -53,16 +53,24 @@ Ideally, we would like to be able to classify a mouse as belonging to one or the
 
 Using this algorithm we associate the value of every new sample with the value of the cluster center closest to it.
 
-> loop:
+ loop:
 > read in x<sup>t</sup> 
-> calculate /&#x135 = argmin ‖ x<sup>t</sup> - w<sup>j</sup> ‖
 
-> w<sup>/&#x135</sup> &#x2190 w<sup>j</sup> + (1 - α) x<sup>t</sup> 
+> calculate 
 
-And as we add this new value to some cluster, we update the average value of that cluster and move w<sup>j</sup> closer to the added value. As tthe algorithm progresses, some clusters will starve, some will crawl towards each other, they will not be quite as they were during the initialisation, but resulting clusters will be fairly accurate. If we initialise many more clusters than we expect we need , and if they are quite spread out, we can arrive to the correct positioning of cluster centers by throwing away starved ones and joining the ones that are close together.
+
+![Formula 1 for cluster centres converging](images/lecture-12/01.png)
+
+And as we add this new value to some cluster, we update the average value of that cluster and move w<sup>j</sup> closer to the added value.
+
+As the algorithm progresses, some clusters will starve, some will crawl towards each other, they will not be quite as they were during the initialisation, but resulting clusters will be fairly accurate. 
+
+If we initialise many more clusters than we expect we need , and if they are quite spread out, we can arrive to the correct positioning of cluster centers by throwing away starved ones and joining the ones that are close together.
 
 Usages of k-means:
+
 One example of using this algorithm could be recognition of hand written digits.
+
 Another one - speech recognition.
 
 When the system analyzes speech for each bin it gets a vector( of ~ 128 dimensions) to represent frequencies. It is hard to compute things using 128 dimensions, so instead of this vector analysis works on cluster indices generated for the vectors. When a new user starts using the system, the clusters get updated to suit.
@@ -76,16 +84,18 @@ Factors to consider when using clustering algorithms:
 - will the pull factor lessen with time and will the centers move less?
 - will the resulting clusters be correct?
 We can use Voronoj diagram to split our space into planes where the points lying in the same plane correspond to its cluster centre:
-
 ![data example for fitting SV](images/lecture-12/voronoj_diagram_clustering.png)
 
 To find cluster center w<sup>j</sup> amongst many cluster centers such that x is closest to w<sup>j</sup> we minimise error E using stochastic gradient on clustering function:
-> E = Σ<sub>t</sub> ‖ x<sup>t</sup> - w<sup>/&#x135</sup> ‖<sup>2</sup>,
-> where /&#x135 = argmin ‖ x<sup>t</sup> - w<sup>j</sup> ‖,
-> hence
+
+
+![Formula 2 for minimising error E on clustering function](images/lecture-12/02.png)
+
+ hence
+ 
 > E = Σ<sub>t</sub> minΣ<sub>j</sub> ‖ x<sup>t</sup> - w<sup>j</sup> ‖<sup>2</sup>
 
-We use stochastic gradient descent on k-means function
+
 
 
 
