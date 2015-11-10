@@ -6,17 +6,21 @@ Notes
 Unsupervised Learning
 #### Clustering
 
+
 Linear vector quantization (LVQ) aka k-means
 
 Example.
 You are given a task of calculating an average weight of a mouse in some mouse colony.
 How would you approach it? You could measure the weight of every mouse, sum it up and then divide the total by a number of mice measured.
+
 If there are too many mice to measure, you could, perhaps, measure some representative sample of the mouse population and calculate the average based on the sample.
+
 But what would you do if the average was dynamic, for instance, the mice are a subject of the experiment that affects their weight and we want to track the changes to the average weight? Keep in mind, your solution needs to be realistic in terms of data storage we can designate for our calculations.
 
 To calculate a running average we simply need to keep track of the running total and the current count:
 
 > a<sub>1</sub>,...,a<sub>t</sub> are weights
+
 > S<sub>t</sub> = Σ<sub>i=1..t</sub> a<sub>i</sub> is a total weight
 
 and then the average weight is calculated as follows:
@@ -26,9 +30,11 @@ and then the average weight is calculated as follows:
 if we need to add another mouse's weight the next day we update out total and our count:
 
 > S<sub>t+1</sub> = S<sub>t</sub> + a<sub>t+1</sub> 
+
 > A<sub>t+1</sub> = S<sub>t+1</sub>/t+1
 
-In our case, however, if we want to track the changes in the average weight, we may want to only calculate the average weight over the last month
+In our case, however, if we want to track the changes in the average weight, we may want to only calculate the average weight over the last month.
+
 We want to disregard old data and give more weight to the new data. To do so we can use decaying sum:
 
 Decaying estimate:
@@ -43,7 +49,9 @@ We adjust our formulas accordingly:
 
 > A<sub>t</sub> = S<sub>t</sub>/Σ<sub>j=0..∞</sub> (0.98)<sup>j</sup>
 
-Say in our example we have 2 subpopulations of mice and they differ by weight. How can we begin to sort them?
+Now lets say in our example we have 2 subpopulations of mice and they differ by weight. In this situation we would like 2 averages, each calculated for a separate subpopulation.
+
+How can we begin to sort them?
 
 ![data example for fitting SV](images/lecture-12/bimodal histogram.png)
 
@@ -56,10 +64,9 @@ Using this algorithm we associate the value of every new sample with the value o
  loop:
 > read in x<sup>t</sup> 
 
-> calculate 
+> calculate ĵ = argmin<sub>j</sub> ‖ x<sup>t</sup> - w<sup>j</sup> ‖
 
-
-![Formula 1 for cluster centres converging](images/lecture-12/01.png)
+> w<sup>ĵ</sup> ← α w<sup>ĵ</sup> + (1 - α) x<sup>t</sup> 
 
 And as we add this new value to some cluster, we update the average value of that cluster and move w<sup>j</sup> closer to the added value.
 
@@ -90,10 +97,12 @@ We can use Voronoj diagram to split our space into planes where the points lying
 To find cluster center w<sup>j</sup> amongst many cluster centers such that x is closest to w<sup>j</sup> we minimise error E using stochastic gradient on clustering function:
 
 
-![Formula 2 for minimising error E on clustering function](images/lecture-12/02.png)
+> E = Σ<sub>t</sub> ‖ x<sup>t</sup> - w<sup>ĵ</sup> ‖<sup>2</sup>,
 
- hence
- 
+ where 
+> ĵ = argmin<sub>j</sub> ‖ x<sup>t</sup> - w<sup>j</sup> ‖,
+
+hence
 > E = Σ<sub>t</sub> minΣ<sub>j</sub> ‖ x<sup>t</sup> - w<sup>j</sup> ‖<sup>2</sup>
 
 
