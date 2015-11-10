@@ -87,7 +87,7 @@ For data like this we can fit many possible linear thresholds that will predict 
 1) classifies data correctly
 2) positioned in such a way that the nearest square and the nearest circle are as far away from it as possible.
 
-![data example for fitting SV](images/lecture-08optimal-hyperplane.png)
+![data example for fitting SV](images/lecture-08/optimal-hyperplane.png)
 
 Its position depends solely on data points touching the margin (the support vectors).
 
