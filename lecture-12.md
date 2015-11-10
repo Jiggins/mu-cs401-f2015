@@ -84,6 +84,7 @@ Factors to consider when using clustering algorithms:
 - will the pull factor lessen with time and will the centers move less?
 - will the resulting clusters be correct?
 We can use Voronoj diagram to split our space into planes where the points lying in the same plane correspond to its cluster centre:
+
 ![data example for fitting SV](images/lecture-12/voronoj_diagram_clustering.png)
 
 To find cluster center w<sup>j</sup> amongst many cluster centers such that x is closest to w<sup>j</sup> we minimise error E using stochastic gradient on clustering function:
