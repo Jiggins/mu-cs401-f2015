@@ -1,6 +1,6 @@
 2/11/2015
 
-Lecture 12
+Lecture 11
 Notes
 
 Unsupervised Learning
@@ -27,7 +27,7 @@ and then the average weight is calculated as follows:
 
 > A<sub>t</sub> = S<sub>t</sub>/t
 
-if we need to add another mouse's weight the next day we update our total and our count:
+if we need to add another mouse's weight the next day we update out total and our count:
 
 > S<sub>t+1</sub> = S<sub>t</sub> + a<sub>t+1</sub> 
 
@@ -43,7 +43,7 @@ Decaying estimate:
 
 We call (0.98) in the following example decaying constant and we can denote it as α, s.t 0 < α < 1
 
-We adjust our formulae accordingly:
+We adjust our formulas accordingly:
 
 > S<sub>t+1</sub> = a<sub>t+1</sub> + 0.98 S<sub>t</sub>
 
@@ -104,7 +104,6 @@ To find cluster center w<sup>j</sup> amongst many cluster centers such that x is
 
 hence
 > E = Σ<sub>t</sub> minΣ<sub>j</sub> ‖ x<sup>t</sup> - w<sup>j</sup> ‖<sup>2</sup>
-
 
 
 
