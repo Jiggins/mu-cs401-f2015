@@ -60,11 +60,11 @@ Instead, another option is to use stochastic grading descent:
 
 - η has to go to zero, slowly enough that we can get rid of the noise.
 
-> Σ<sub>t=1..∞</sub> η(t) = ∞ 
+> Σ<sub>t=1...∞</sub> η(t) = ∞ 
 
 (to have enough momentum), but also, for descent to be fast enough
 
-> Σ<sub>t=1..∞</sub> η(t)<sup>2</sup> < ∞:
+> Σ<sub>t=1...∞</sub> η(t)<sup>2</sup> < ∞:
 
 so
 
