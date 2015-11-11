@@ -53,7 +53,7 @@ Now let’s say in our example we have 2 subpopulations of mice and they differ 
 
 How can we begin to sort them?
 
-![data example for fitting SV](images/lecture-11/bimodal histogram.png)
+![bimodal histogram](images/lecture-11/bimodal histogram.png)
 
 Ideally, we would like to be able to classify a mouse as belonging to one or the other subpopulation and only update the relevant subpopulation average with that weight. But we don't know, when we are given a mouse, which class of mice it belongs to. One algorithm gives us a way around it by creating cluster centres and using the cluster centres for classification.
 
@@ -92,7 +92,7 @@ Factors to consider when using clustering algorithms:
 - will the resulting clusters be correct?
 We can use [Voronoi](https://en.wikipedia.org/wiki/Voronoi_diagram) diagram to split our space into planes where the points lying in the same plane correspond to its cluster centre:
 
-![data example for fitting SV](images/lecture-11/voronoj_diagram_clustering.png)
+![voronoj diagram](images/lecture-11/voronoj_diagram_clustering.png)
 
 To find cluster centre w<sup>j</sup> amongst many cluster centres such that x is closest to w<sup>j</sup> we minimise error E using stochastic gradient on clustering function:
 
