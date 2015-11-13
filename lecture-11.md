@@ -92,14 +92,14 @@ Factors to consider when using clustering algorithms:
 - will the resulting clusters be correct?
 We can use [Voronoi](https://en.wikipedia.org/wiki/Voronoi_diagram) diagram to split our space into planes where the points lying in the same plane correspond to its cluster centre:
 
-![voronoj diagram](images/lecture-11/voronoj_diagram_clustering.png)
+![Voronoi diagram](images/lecture-11/voronoj_diagram_clustering.png)
 
 To find cluster centre w<sup>j</sup> amongst many cluster centres such that x is closest to w<sup>j</sup> we minimise error E using stochastic gradient on clustering function:
 
 
 > E = Σ<sub>t</sub> ‖ x<sup>t</sup> - w<sup>ĵ</sup> ‖<sup>2</sup>,
 
- where 
+where 
 > ĵ = argmin<sub>j</sub> ‖ x<sup>t</sup> - w<sup>j</sup> ‖,
 
 hence
