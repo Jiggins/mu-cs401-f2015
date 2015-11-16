@@ -3,21 +3,21 @@ Mixture Model
 
 #Two iterations of:
 * (Data, Assignments) ----m-step----> Model
-* (Data, Model)       ----e-step----> Assigments
+* (Data, Model)       ----e-step----> Assignments
 
 Hidden Markov Model
 ===================
 * Finite state machines
 * Baum-Welsh speech recognition for NSA
 * Outputs can be associated with states or transitions
-* Bernoulli trial and speech recongnition examples
+* Bernoulli trial and speech recognition examples
 * π = probability distribution for the start state
 
 #What makes it "hidden"?
 * States are hidden - only have the output
 * Goals (given output):
   * Reconstruct sequence of states
-  * Determine which model produced it (Baye's Rule)
+  * Determine which model produced it [Bayes' Rule](https://en.wikipedia.org/wiki/Bayes%27_rule)
 
 #Problems:
 1. (output seq, HMM)  --infer--> sequence of states
