@@ -21,3 +21,4 @@ Instructional Materials
 
 * http://deeplearning.net/tutorial/
 * https://github.com/hangtwenty/dive-into-machine-learning
+* Curated list of Reinforcement Learning Resources: http://aikorea.org/awesome-rl/
