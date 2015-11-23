@@ -68,10 +68,10 @@ Coin flip table
 
 | V  | a1  | a2  |
 |---|---|---|
-| 01 | 00 | 0 | 0 |
-| 00 |    | 0 | 1 |
-|    |    | 1 | 0 | 
-|    |    | 1 | 1 | 
+|   | 0 | 0 |
+|   | 0 | 1 |
+|   | 1 | 0 | 
+|   | 1 | 1 | 
 
 
 directed graphical model -> undirected graphical model
