@@ -18,7 +18,7 @@ Stero fuse (Stero vision) - Using two camera that are close side-by-side postion
 Encoding on noisey channel
 
 m > n
-
+<pre>
    m                   n (message)
  |                  | | 0 |
  |                  | | 1 |
@@ -31,11 +31,14 @@ m > n
 
  | Parody (XOR of all bits)|
 
+</pre>
+
 Message matrix < m > | n - message ^ 
 Parody (XOR of all bits)
 
 Best matrix for encoding messages on a noisey channel 
 
+<pre>
    m                   n (message)
  |                  | | 0 |
  |   sparse,        | | 1 |
@@ -45,6 +48,7 @@ Best matrix for encoding messages on a noisey channel
  |                  | | 1 |
  |                  |
  |                  |
+</pre>
 
 Above matrix m is the only know one to approch shannon's limit of transmission
 
