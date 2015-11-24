@@ -9,5 +9,3 @@ The Product-Sum algorithm is an algorithm for computing for sampling a graphical
 
 *In Practice* We have made some observations (e.g. characters) and we want to figure out the marginal probabilities in the graphical model  (e.g. the word someone was trying to type). Finding the full joint distribution is too hard of problem for graphical models 
 
-<a href="url"><img src="images/lecture-17/Bayes-rule.png" height = "227" width = "607"></a>
-* We associate a function f with  
