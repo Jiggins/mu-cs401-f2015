@@ -1,0 +1,16 @@
+Intro: Previously on CS401...
+======
+
+Machine Learning theorists have a probabilistic perspective. Previously we have looked at probabistic algorithms such as:
+
+* Bayes rule
+    * P(A|B) = P(B|A) P(A) / P(B)
+    * relates the odds of event A1 to event A2, before and after conditioning to another event B.
+* K-means clustering
+    * unsupervised learning algorithm that classifies a given data set into clusters.
+* Back propagation
+    * calculates the gradient of a loss function with respect to all the weights in the network.
+
+Rest of the lecture to follow...
+======
+
