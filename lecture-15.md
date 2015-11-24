@@ -11,6 +11,24 @@ Machine Learning theorists have a probabilistic perspective. Previously we have 
 * Back propagation
     * calculates the gradient of a loss function with respect to all the weights in the network.
 
-Rest of the lecture to follow...
+Now: Probabalistic Estimation With Confidence Interval
 ======
 
+## Augmenting the backpropagation network
+
+### Nice to know how certain our output is
+
+Gaussian distribution of output?
+
+[image placeholder]
+
+[derivation placeholder]
+
+## Unsupervised Learning
+
+* Data fit to probability distribution
+* Graphical models
+    * graph theory
+    * inference is hard for graph models
+
+[image placeholder]
