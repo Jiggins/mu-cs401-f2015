@@ -22,13 +22,13 @@ Consider the 2D data set
 
 ![Alt text](images/lecture-18/2DData.jpg)
 
-where y1 and y2 are drawn from gaussian (normal) generators as follows:
+where y1 and y2 are drawn from gaussian (normal) generators as follows
 	+y1 ~ g(0;1^2)
 	+y2 ~ g(0;2^2)
 
 where a gaussian distribution is parameterised as g(mean; std. dev)
 
-we also have the following energy functions for y1 and y2:
+we also have the following energy functions for y1 and y2
 	+E(y1) = y1^2
 	+E(y2) = (y2^2)/4
 
