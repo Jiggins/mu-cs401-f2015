@@ -83,4 +83,12 @@ Include the lambda's:
 ![Alt text](images/lecture-18/ndimenlambdas.gif)  
 where  
 ![Alt text](images/lecture-18/C.gif)  
+  
+
+When the distribution(s?) are axial parallel we have: 
+
+![Alt text](images/lecture-18/axialpmatrix.gif)  
+  
+when the the distribution(s?) are not axial parallel the matrix gives you the orientation of the distribution(s?)
+
 
