@@ -89,6 +89,11 @@ When the distribution(s?) are axial parallel we have:
 
 ![Alt text](images/lecture-18/axialpmatrix.gif)  
   
-when the the distribution(s?) are not axial parallel the matrix gives you the orientation of the distribution(s?)
+when the the distribution(s?) are not axial parallel the matrix gives you the orientation of the distribution(s?)  
+___  
+  
+Going back to our 2D data set, we have x expressed as a sum:  
+![Alt text](images/lecture-18/2ddataassum.gif)  
+
 
 
