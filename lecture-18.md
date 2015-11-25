@@ -51,8 +51,8 @@ Thus the joint energy of the two samples is:
  	E(y1,y2) = (y1^2) +  (y2^2)/4  
 
 Then we can get the probability of some X across the two gaussians:  
-	p(x) = 1/Z(e^-(E(y1,y2)))  
 
+	p(x) = 1/Z(e^-(E(y1,y2)))  
 	where Z is the partition function(see previous lectures)  
 
 ##Non axial parallel example 
