@@ -120,7 +120,7 @@ with the constraint that:
   
   
 Usually only one source of variation is non-zero in this case.
-This allows for independent component anlaysis
+This allows for independent component anlaysis.
 
 
 
