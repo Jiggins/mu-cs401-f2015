@@ -69,4 +69,4 @@ Thus we have another energy function, that describes a 2D gaussian with arbitrar
 	![Alt text](images/lecture-18/2dgaussenergy.gif)  
 
 	where:  
-		![Alt text](images/lecture-18/orthovectorconstraint.gif)  
+		![Alt text](images/lecture-18/orthovectconstrain.gif)  
