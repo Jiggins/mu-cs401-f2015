@@ -63,4 +63,7 @@ In the case where the distributions are non-axial parallel. For example:
   
 There are 2 sources of variation in the data given by ci, where:  
 	||ci|| = 1 //ci is a unit vector  
-	 λi = amount of std. dev in direction i
+	 λi = amount of std. dev. in direction i
+
+Thus we have another energy function:  
+	![Alt text](images/lecture-18/2dgaussenergy.gif)  
