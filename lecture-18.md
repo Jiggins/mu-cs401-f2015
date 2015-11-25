@@ -82,5 +82,5 @@ How do we expand this concept to n-space?
 Include the lambda's:  
 ![Alt text](images/lecture-18/ndimenlambdas.gif)  
 where  
-![Alt text](images/lecture-18/c.gif)  
+![Alt text](images/lecture-18/C.gif)  
 
