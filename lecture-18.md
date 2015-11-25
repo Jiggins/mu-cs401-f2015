@@ -65,5 +65,8 @@ There are 2 sources of variation in the data given by ci, where:
 	||ci|| = 1 //ci is a unit vector  
 	 λi = amount of std. dev. in direction i
 
-Thus we have another energy function:  
+Thus we have another energy function, that describes a 2D gaussian with arbitrary direction:
 	![Alt text](images/lecture-18/2dgaussenergy.gif)  
+
+	where:  
+		![Alt text](images/lecture-18/orthovectorconstraint.gif)  
