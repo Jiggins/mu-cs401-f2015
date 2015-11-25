@@ -23,13 +23,13 @@ Consider the 2D data set
 ![Alt text](images/lecture-18/2DData.jpg)
 
 where y1 and y2 are drawn from gaussian (normal) generators as follows:
-	y1 ~ g(0;1^2)
-	y2 ~ g(0;2^2)
+	+y1 ~ g(0;1^2)
+	+y2 ~ g(0;2^2)
 
 where a gaussian distribution is parameterised as g(mean; std. dev)
 
 we also have the following energy functions for y1 and y2:
-	E(y1) = y1^2
-	E(y2) = (y2^2)/4
+	+E(y1) = y1^2
+	+E(y2) = (y2^2)/4
 
-(for those who are wondering what all this talk of energy functions is about and what they have to do stats [this](http://www.askamathematician.com/2010/02/q-whats-so-special-about-the-gaussian-distribution-a-k-a-a-normal-distribution-or-bell-curve) might help)
+(for those who are wondering what all this talk of energy functions is about and what they have to do with stats [this](http://www.askamathematician.com/2010/02/q-whats-so-special-about-the-gaussian-distribution-a-k-a-a-normal-distribution-or-bell-curve) might help)
