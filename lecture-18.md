@@ -97,7 +97,7 @@ Going back to our 2D data set, we have x expressed as a sum:
 
 ##Example  
 ___
-say we have an 8*8 matrix X, a 64 * 12 matrix A (the column joined ci's) and a 12*M matrix B  
+say we have an 8 * 8 matrix X, a 64 * 12 matrix A (the column joined ci's) and a 12*M matrix B  
 we want to decompose X (approximately)  S.T:  
 ![Alt text](images/lecture-18/adotb.gif)  
 
