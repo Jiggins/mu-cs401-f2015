@@ -116,7 +116,7 @@ with the constraint that:
 
  For example consider the distributions:  
 
-![Alt text](images/lecture-18/nonorthconstraint.jpg)  
+![Alt text](images/lecture-18/noorthconstraint.jpg)  
   
   
 Usually only one source of variation is non-zero in this case.
