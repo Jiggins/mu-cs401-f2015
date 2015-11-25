@@ -69,4 +69,10 @@ Thus we have another energy function, that describes a 2D gaussian with arbitrar
 	![Alt text](images/lecture-18/2dgaussenergy.gif)  
 
 	where:  
-![Alt text](images/lecture-18/orthovectconstrain.gif)  
+![Alt text](images/lecture-18/orthovectconstrain.gif)   // [i=j] knuth notation, returns 0 or 1
+
+##Expanding to n-dimensional gaussians
+___  
+  
+How do we expand this concept to n-space?
+![Alt text](images/lecture-18/ndimengaussianorientation.gif)
