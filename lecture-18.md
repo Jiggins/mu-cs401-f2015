@@ -32,4 +32,4 @@ we also have the following energy functions for y1 and y2:
 	E(y1) = y1^2
 	E(y2) = (y2^2)/4
 
-(for those who are wondering what all this talk of energy functions is about and what they have to do stats [this](http://www.askamathematician.com/2010/02/q-whats-so-special-about-the-gaussian-distribution-a-k-a-a-normal-distribution-or-bell-curve)) might help)
+(for those who are wondering what all this talk of energy functions is about and what they have to do stats [this](http://www.askamathematician.com/2010/02/q-whats-so-special-about-the-gaussian-distribution-a-k-a-a-normal-distribution-or-bell-curve) might help)
