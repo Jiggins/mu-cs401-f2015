@@ -74,5 +74,6 @@ Thus we have another energy function, that describes a 2D gaussian with arbitrar
 ##Expanding to n-dimensional gaussians
 ___  
   
-How do we expand this concept to n-space?
+How do we expand this concept to n-space?  
+
 ![Alt text](images/lecture-18/ndimengaussianorientation.gif)
