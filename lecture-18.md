@@ -106,6 +106,8 @@ we find:
 i.e. the least squares approach  
 with the constraint that:  
 ![Alt text](images/lecture-18/constraintonA.gif)  
+  
+(aside: all major contributions to the field of statistics have been by pyshcologists, not statisticians.)
 
 
 
