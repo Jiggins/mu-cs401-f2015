@@ -93,7 +93,19 @@ when the the distribution(s?) are not axial parallel the matrix gives you the or
 ___  
   
 Going back to our 2D data set, we have x expressed as a sum:  
-![Alt text](images/lecture-18/2ddataassum.gif)  
+![Alt text](images/lecture-18/2ddataassum.gif)
+
+##Example  
+___
+say we have an 8*8 matrix X, a 64 * 12 matrix A (the column joined ci's) and a 12*M matrix B  
+we want to decompose X (approximately)  S.T:  
+![Alt text](images/lecture-18/adotb.gif)  
+
+we find:  
+![Alt text](images/lecture-18/argmindecomp.gif)  
+i.e. the least squares approach  
+with the constraint that:  
+![Alt text](images/lecture-18/constraintonA.gif)  
 
 
 
