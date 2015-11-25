@@ -14,7 +14,9 @@ ___
 +In general matrix decomposition is the factorization of a matrix into a product of matrices. In particular we talk about non-negative matrix 
 factorization(NMF), that is we factorize a matrix into two matrices such that all three matrices are element wise non-negative.
 
-+Many problems can be rephrased as matrix decomposition and thus it is a handy tool to have in the machine learning shed.
++Many problems can be rephrased as matrix decomposition and thus it is a handy tool to have in the machine learning shed.  
+  
++Data sets such as images etc. fall into the line of fire of NMF 
 
 ###Example
 ___
@@ -107,7 +109,19 @@ i.e. the least squares approach
 with the constraint that:  
 ![Alt text](images/lecture-18/constraintonA.gif)  
   
-(aside: all major contributions to the field of statistics have been by pyschologists, not statisticians.)
+(aside: all major contributions to the field of statistics have been by pyschologists, not statisticians.)  
+  
+ What if we relax the above constraint (i.e. that the ci's are pairwise orthogonal)?  
+ => No unique solution (to what???)  
+
+ For example consider the distributions:  
+
+![Alt text](images/lecture-18/nonorthconstraint.jpg)  
+  
+  
+Usually only one source of variation is non-zero in this case.
+This allows for independent component anlaysis
+
 
 
 
