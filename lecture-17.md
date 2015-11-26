@@ -23,3 +23,37 @@ With a tree graph, the product-sum algorithm will converge. However with a chain
 *Problem* Given the structure and lots of samples from Graphical models, can we figure out the relationships between them? This is a learning problem. 
 
 From Boltzmann Machine we will deal with binary variables. The graph is separated into 2 parts, the hidden variables and visible variables. The links in the graph encode a complicated probability distribution. The hidden part is supporting structure for the visible.
+
+Let E=Σ<sub>i<j</sub>s<sub>i</sub> s<sub>j</sub> w<sub>ij</sub>.
+
+Let α be some configuration of the system. 
+P(α) is proportional to e<sup>-Eα/t</sup>
+
+Pick s<sub>i</sub> and consider it changing its state. 
+
+Calculate E<sub>si=1</sub> and E<sub>si=0</sub>
+
+<!-- Some formulas go here  --> 
+
+<!-- some graphs go here --> 
+
+The parameter T can be viewed as temperature 
+
+A High T gives: 
+
+<!-- graph goes here -->
+
+A Low T gives 
+
+<!-- graphs goes here -->
+
+let α be a configuration of the visible states and β be a confuguration of hidden states 
+
+<!-- Some formulas go here  -->
+
+We want to calculate: 
+
+<!-- Some formulas go here  -->
+
+
+
