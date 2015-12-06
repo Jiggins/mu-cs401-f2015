@@ -2,6 +2,9 @@
 
 ## PCA and SVD
 
+Note readable intro to PCA:
+http://efavdb.com/principal-component-analysis/
+
 ## Independent Components Analysis (ICA)
 
 https://en.wikipedia.org/wiki/Independent_component_analysis
