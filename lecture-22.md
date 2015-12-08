@@ -10,4 +10,4 @@ https://www.google.ie/search?q=ROC+curve
 
 https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework
 
-http://research.microsoft.com/~viola/Pubs/Detect/violaJones_IJCV.pdf
+http://www.vision.caltech.edu/html-files/EE148-2005-Spring/pprs/viola04ijcv.pdf
