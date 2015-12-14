@@ -16,7 +16,7 @@ http://www.cs.ualberta.ca/~sutton/book/the-book.html
 
 ## Policy-Value Iteration
 
-
+https://en.wikipedia.org/wiki/Markov_decision_process
 
 ## Q-Learning
 
