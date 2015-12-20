@@ -1,0 +1,15 @@
+\documentclass[paper=a5,fontsize=12pt]{scrbook}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\begin{document}
+\begin{preview}
+\begin{tikzpicture}[inner sep=0pt, outer sep=0pt]
+\node at (0, 0) {$ \frac{P(\alpha[s_i=1])}{P(\alpha[s_i=1])+P(\alpha[s_i=0]))}=\frac{e^{\frac{E_{\alpha,s_i=1}}{T}}}{e^{ \frac{-E_{\alpha,s_i=1}}{T}}+e^{ \frac{-E_{\alpha,s_i=0}}{T}}} $};
+\node at (0,-1) {$=\frac{1}{1+e^{- \frac{(E_{\alpha,s_i=1} -E_{\alpha,s_i=0})}{T} }}$};
+\node at (0,-2) {$=\frac{1}{1+e^{ \frac{-\Delta E_{\alpha,i} } {T}              }                    }$};
+\end{tikzpicture}
+\end{preview}
+\end{document}
