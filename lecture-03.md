@@ -1,5 +1,3 @@
-
-
 Rosenblatt's perceptron
 
 Perceptron Research from the 50s and 60s
@@ -48,7 +46,7 @@ Stochastic Gradient Descent
 
 > ∇<sub>w</sub>E = <sup>1<sub>0</sub></sup> 0
 
-As is, it's great for finding the minimum for flat curves in the weight-space. However it's more difficult to solve for more complicated shapes.
+As is, it's great for finding the minimum for flat curves in the weight-space. However, it's more difficult to solve for more complicated shapes.
 
 [Topographic_1]
 [Topographic_2]
@@ -61,16 +59,16 @@ We undergo a process of iteration in order to find the local minima.
 
 >where η > 0
 
-The function above is known as a naïve gradient descent as we only select one value for η. A better implementations would have more values for η as we descend.
+The function above is known as a naïve gradient descent as we only select one value for η. A better implementation would have more values for η as we descend.
 > E = <sup>1</sup>/<sub>2</sub> < ||ŷ - y||<sup>2</sup> >
 
-> ∇<sub>w</sub>E = < <sup>1</sup>/<sub>2</sub> ∇<sub>w</sub> ||ŷ - y||<sup>2</sup> > <- ŷ = f(x;w)
+> ∇<sub>w</sub>E = < <sup>1</sup>/<sub>2</sub> ∇<sub>w</sub> ||ŷ - y||<sup>2</sup> > <- ŷ = f(x; w)
 
 > <text>=</text> < <sup>1</sup>/<sub>2</sub> ∇<sub>w</sub> (ŷ - y)<sup>T</sup>(ŷ - y) >
 
 > <text>=</text> < <sup>1</sup>/<sub>2</sub> ∇<sub>w</sub> (ŷ <sup>T</sup> ŷ) -2y<sup>T</sup> ŷ + y<sup>T</sup>y >
 
-> <sup>dE</sup>/<sub>dw<sub>k</sub></sub> = < <sup>1</sup>/<sub>2</sub> ( <sup>d</sup>/<sub>dw<sub>k</sub></sub>(ŷ <sup>T</sup> ŷ) -2y<sup>T</sup> (<sup>d</sup>/<sub>dw<sub>k</sub></sub> ŷ) ) >
+> <sup>dE</sup>/<sub>dw<sub>k</sub></sub> = < <sup>1</sup>/<sub>2</sub> (<sup>d</sup>/<sub>dw<sub>k</sub></sub>(ŷ <sup>T</sup> ŷ) -2y<sup>T</sup> (<sup>d</sup>/<sub>dw<sub>k</sub></sub> ŷ)) >
 
 Dimensionality of the ŷ matrix is respective to w.
 
@@ -118,7 +116,6 @@ We add what we've gathered to a diagram of a perceptron.
 > (s<sup>'</sup>(φ) = s(φ)(1-s(φ)) <--- Epidemic equation)
 
 
-
 Semi linear systems
 ===================
 
@@ -133,4 +130,3 @@ In semi linear systems we can define our output ŷ as being a probability of tru
 
 ##Logistic Regression
 Logistic regression can be defined as the combination of the Cross-Entropy error + Regression
-
