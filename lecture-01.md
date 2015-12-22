@@ -59,7 +59,7 @@ x → Machine → ŷ
 
 ŷ = f(x;w)
 
-E = (1/m) sum_i=0..(m-1) (1/2) || f(x(i);w) - y(i) ||^2
+E = (1/m) sum_i = 0...(m-1) (1/2) || f(x(i);w) - y(i) ||^2
 
 Linear Regression
 -----------------
@@ -105,4 +105,3 @@ Assignment:
 * Soon we'll get an assignment.
 * Grade each other’s (double blind) to make a sparse matrix.
 * Use this as a dataset for some interesting problems.
-
