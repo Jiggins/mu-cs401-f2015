@@ -30,7 +30,7 @@ Humans could decipher these flaws easily
 		
 ##PapNet Success
 * Much cheaper and accurate than traditional methods
-* First billion dollar company using Machine Learning
+* First billion-dollar company using Machine Learning
  
 ##Aside
 * Congress created a law to decrease false-negative Pap smear rates
