@@ -9,7 +9,7 @@ Perceptron fits under supervised.
 #Perceptron
 
 
-![alt text](https://dwave.files.wordpress.com/2011/05/qc_ai_diag1b.jpg "Picture of perceptron")
+![ Picture of perceptron](https://dwave.files.wordpress.com/2011/05/qc_ai_diag1b.jpg "Picture of perceptron")
 
 The Perceptron is made up of 3 main components:
 Input x<sup>i</sup> (can be many dimensions, 2D - yes/no, higher - what's in a picture? dog, cat? etc.) 
@@ -24,7 +24,7 @@ You can turn and fiddle with the dials to make things nice, usually by some obje
 Try hard to get the correct answer - non-objective, this is what it used to be, they used rule of thumb.
 
 Perceptron is an early ML algorithm which fiddles with the dials to get the output correct for a given input.
-If you do this repeatedly for a data set you can prove then it will get the correct answer on all of them.
+If you do this repeatedly for a data set, you can prove then it will get the correct answer on all of them.
 
 Usually we have some error measure, usually a fraction of what it gets right, we'll call this E, we want this to be low.
 
@@ -54,7 +54,7 @@ so ŷ = sign(∑(j=1, n) w<sup>(j)</sup>*x<sup>(j)</sup> - θ) this is the Trans
 So what was the motivation behind the Perceptron?
 # Neurons
 
-![alt text](http://www.explorecuriocity.org/Portals/2/article%20images/3756/1280px-Neuron.svg.png "Neuron diagram")
+![Neuron diagram](http://www.explorecuriocity.org/Portals/2/article%20images/3756/1280px-Neuron.svg.png "Neuron diagram")
 
 In the late 1940’s, it was figured out how neurons work. Alan Hodgkin and Andrew Huxley performed experiments on the giant squid axon, recording ionic currents (for which they got the 1963 Nobel Prize in Physiology and Medicine)
 
@@ -73,7 +73,7 @@ Why don’t we use chemical reactions like this in computers? Cause its slow!
 We can change 2 things, the weight or the threshold. 
 For our example we'll set theta = -w<sup>(0)</sup> and x<sup>(0)</sup> = 1
 
-ŷ = sign(∑(j=0,n) w<sup>(i)</sup>*x<sup>(i)</sup>)  (we'll call the bit in brackets z i.e. z = ∑(j=0,n) w<sup>(j)</sup>*x<sup>(j)</sup>)
+ŷ = sign(∑(j=0, n) w<sup>(i)</sup>*x<sup>(i)</sup>) (we'll call the bit in brackets z i.e. z = ∑(j=0, n) w<sup>(j)</sup>*x<sup>(j)</sup>)
 
 Imagine we have a LEARN button on the machine, if this is pressed it can do 2 things:
 If ŷ and y are the same, do nothing. Otherwise adjust the weights accordingly.
@@ -89,7 +89,7 @@ In modern techniques you make very small changes to the weights over and over, u
 
 But how can we do this? Use Linear Algebra. Think of it as symmetrically pushing vectors around.
 
-![alt text](http://www.willamette.edu/~gorr/classes/cs449/Classification/perceptPict-2.gif)
+![perceptPict-2](http://www.willamette.edu/~gorr/classes/cs449/Classification/perceptPict-2.gif)
 
 Input space - x ϵ R<sup>(n)</sup> (this is the space the inputs of the machine can "live" in)
 
@@ -103,7 +103,7 @@ Output space - binary (yes/no or in our case +1 or -1)
 
 How are we going to change it so that we get the correct response? We've 2 options of what to look at:
 
-For a particular w we look at the input (x), break it up to which we give our to plus or minus 1.
+For a particular w we look at the input (x), break it up to which we give our plus or minus 1.
 
 For a particular x we look at weights (w) and see which give plus or minus 1.
 
@@ -136,17 +136,17 @@ w.x + δ||x||^2 = 0
 
 To make it work for both cases:
 
-δ = (-w.x/||x||^2 + d)*y
+δ = (-w.x/||x||^2 + d) * y
 
-δ = (-w.x/||x||^2 + d)*(y-ŷ/2) (this accounts for the do nothing case
+δ = (-w.x/||x||^2 + d) * (y - ŷ/2) (this accounts for the do nothing case
 
 What δ? Should we normalise w? Turns out there’s not much difference, convenient not too big or small.
 
 If the output is wrong, press learn and it'll be right next time.
-If it sees all inputs it'll get all of the outputs right.
+If it sees all inputs, it'll get all of the outputs right.
 
 Aiming for the smallest tilt to get it right.
-If there’s no setting to get it right then it won't work.
+If there’s no setting to get it right, then it won't work.
 Assignment
 ==========
 
@@ -178,7 +178,7 @@ processing pipeline.)
 
 #Notes from previous years
 
-NOTE : Pictures wouldn't cross over so only text
+NOTE: Pictures wouldn't cross over so only text
 
 Perceptron Learning Rule
 
@@ -187,12 +187,9 @@ Checks if correctly classified
 	if it is → do nothing
 if it’s not → change weights by the minimum amount (rotate w a little bit) so that it would be correctly classified
 
- 
-
 Convergence rule: if w exists, then by cycling through the inputs you’ll eventually find w, where all inputs are classified correctly.
 
 w doesn’t exist if there is even a single outlier. No admissible solution.
-
 
 
  Perceptron:
@@ -202,13 +199,11 @@ w doesn’t exist if there is even a single outlier. No admissible solution.
 •         It was later realized that the perceptron was influenced not only by the shapes of images given for its interpretation but it also was effected by the brightness and was unable to clarify the presence of tanks when there was a different brightness to the time the tank present data was taken.
 How does the perceptron work?
  
-Figure 1. :  is a graphical illustration of a perceptron with inputs, ...,   and output   (sourced from http://reference.wolfram.com/applications/neuralnetworks/NeuralNetworkTheory/2.4.0.html)
+Figure 1.:  is a graphical illustration of a perceptron with inputs, ..., and output (sourced from http://reference.wolfram.com/applications/neuralnetworks/NeuralNetworkTheory/2.4.0.html)
 As seen in figure 1 the weighted sum of the inputs and the unity bias are first summed and followed by being processed by a step function yielding the output
- 	(x, w, b)= UnitStep (w1 x1 + w¬2 x¬2 +  . . . + wn xn + b)
+ 	(x, w, b) = UnitStep (w1 x1 + w¬2 x¬2 + … + wn xn + b)
 Where {w1. . . wn} are the weights applied to the input vector and b is the bias weight. Each of the weights are represented by the arrows in figure 1. The UnitStep function is 0 for arguments less than 0 and 1 elsewhere. So   can take values of 0 or 1 depending on the value of the weighted sum. The perceptron can indicate 2 classes corresponding to these 2 input values. While in the training process, the weights (inputs and bias) are adjusted so the input data is mapped correctly to one of the two classes.
 Off sample performance more important!!!
-
-
 
 
 Cross validation
