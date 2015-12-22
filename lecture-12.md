@@ -17,7 +17,7 @@ So, yes people who get cancer are more likely to be tall.
 
 Imagine a machine, with various parameters, that produces data randomly, and a database of some kind of documents.
 
-When run, it produces a one page document. 
+When run, it produces a one-page document. 
 
 There is a very small chance that it will match a document already in our database.
 
