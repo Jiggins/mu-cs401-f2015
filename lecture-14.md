@@ -13,7 +13,7 @@ Multiscale Quadtree
 
 -Images have multiscale properties, i.e. the statically probability of the distribution remains the same when viewing the image when zoomed in or viewing it full sized.
 
-Stereo fuse (Stereo vision) - Using two camera that are close side-by-side position for depth perception, gives uncertainly which is important, e.g. we know where a ball might land after thrown but can't tell for sure where it'll land but the general area, i.e. a gust of wind could change the trajectory at the last second.
+Stereo fuse (Stereo vision) - Using two cameras that are close side-by-side position for depth perception, gives uncertainly which is important, e.g. we know where a ball might land after thrown but can't tell for sure where it'll land but the general area, i.e. a gust of wind could change the trajectory at the last second.
 
 Encoding on noisy channel
 
@@ -60,9 +60,9 @@ A Graphical model allows us to use inference to get x
  ( y1 )   ( y2 )    ( y3 )        (  )   (  )
 
 
-These tables have P(V = V<sub>i</sub> | A<sub>i</sub> = a<sub>i</sub>, A<sub>2</sub> = a<sub>2</sub> .....)
+These tables have P(V = V<sub>i</sub> | A<sub>i</sub> = a<sub>i</sub>, A<sub>2</sub> = a<sub>2</sub> ...)
 
-          #v * #a2 * #a3 * ...... * an 
+          #v * #a2 * #a3 * ... * an 
 
 Coin flip table
 
@@ -79,18 +79,18 @@ Using energy instead of probability
 
 given ancestors of node, find node
 
-write byte  read byte
+write byte read byte
 
   ( x )  ->  ( y )
 
 P (y | x)
 
-| P(y|x)  | y  | x  |
-|---|---|---|
-| .9  | 0 | 0 |
-| .1  | 1 | 0 |
-| .2  | 0 | 1 | 
-| .8  | 1 | 1 | 
+<pre>| P(y|x) | y | x |
+|--------|---|---|
+|   .9   | 0 | 0 |
+|   .1   | 1 | 0 |
+|   .2   | 0 | 1 |
+|   .8   | 1 | 1 |</pre>
 
 table for directed model
 
