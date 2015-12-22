@@ -17,7 +17,7 @@ If there are too many mice to measure, you could, perhaps, measure some represen
 
 But what would you do if the average was dynamic, for instance, the mice are a subject of the experiment that affects their weight and we want to track the changes to the average weight? Keep in mind, your solution needs to be realistic in terms of data storage we can designate for our calculations.
 
-To calculate a running average we simply need to keep track of the running total and the current count:
+To calculate a running average, we simply need to keep track of the running total and the current count:
 
 > a<sub>1</sub>, ..., a<sub>t</sub> are weights
 
@@ -59,7 +59,7 @@ Ideally, we would like to be able to classify a mouse as belonging to one or the
 
 ##### [k-means Algorithm](https://en.wikipedia.org/wiki/K-means_clustering)
 
-Using this algorithm we associate the value of every new sample with the value of the cluster centre closest to it.
+Using this algorithm, we associate the value of every new sample with the value of the cluster centre closest to it.
 
  loop:
 > read in x<sup>t</sup> 
