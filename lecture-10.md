@@ -25,10 +25,10 @@ e.g.
 <b>ω</b>: primal/single representation of the vector  
 <b>α</b>: dual representation of the vector  
 <b>ξ<sub>i</sub></b>: slack parameter  
-ω,θ,ξ - penetration variables (penetrate margins)  
+ω, θ, ξ - penetration variables (penetrate margins)  
 y<sup>(i)</sup> = ±1 for either "yes"/"no" class of data points
 <pre>
-Minimise<sub>(ω,θ,ξ)</sub>  
+Minimise<sub>(ω, θ, ξ)</sub>  
               <sup>1</sup>/<sub>2</sub>‖ω‖<sup>2</sup> + cΣ<sub>i</sub>(ξ<sub>i</sub>)
 Subject to:  
               y<sup>(i)</sup>(ω·x<sup>(i)</sup> - θ) ≥ 1 - ξ<sub>i</sub>
@@ -40,25 +40,25 @@ Math Breakdown:
   
 ‖ω‖<sup>2</sup> = ω·ω = (Σ<sub>i</sub>(α<sub>i</sub>y<sup>(i)</sup>φ(x<sup>(i)</sup>))·(Σ<sub>j</sub>(α<sub>j</sub>y<sup>(j)</sup>φ(x<sup>(j)</sup>))
     
-          = Σ<sub>i,j</sub>(α<sub>i</sub>α<sub>j</sub>y<sup>(i)</sup>y<sup>(j)</sup>(φ(x<sup>(i)</sup>)φ(x<sup>(j)</sup>)))
+          = Σ<sub>i, j</sub>(α<sub>i</sub>α<sub>j</sub>y<sup>(i)</sup>y<sup>(j)</sup>(φ(x<sup>(i)</sup>)φ(x<sup>(j)</sup>)))
                 
-          = Σ<sub>i,j</sub>(α<sub>i</sub>α<sub>j</sub>y<sup>(i)</sup>y<sup>(j)</sup>k(x<sup>(i)</sup>,x<sup>(j)</sup>))
+          = Σ<sub>i, j</sub>(α<sub>i</sub>α<sub>j</sub>y<sup>(i)</sup>y<sup>(j)</sup>k(x<sup>(i)</sup>,x<sup>(j)</sup>))
                 
-          = α<sup>T</sup>(y<sup>(i)</sup>y<sup>(j)</sup>k<sub>i,j</sub>)<sub>i,j</sub>
+          = α<sup>T</sup>(y<sup>(i)</sup>y<sup>(j)</sup>k<sub>i, j</sub>)<sub>i, j</sub>
 </pre>
 
 <pre>Substitute ω·φ(x<sup>(i)</sup>)
 
            = Σ<sub>j</sub>(α<sub>j</sub>y<sup>(j)</sup>φ(x<sup>(j)</sup>)φ(x<sup>(i)</sup>))
           
-           = Σ<sub>j</sub>(α<sub>j</sub>y<sup>(j)</sup>k(x<sup>(i)</sup>,x<sup>(j)</sup>))
+           = Σ<sub>j</sub>(α<sub>j</sub>y<sup>(j)</sup>k(x<sup>(i)</sup>, x<sup>(j)</sup>))
 </pre>
 ###Kernelized Algorithm
 <pre>
-Minimise<sub>(α,θ,ξ)</sub>  
-              <sup>1</sup>/<sub>2</sub>α<sup>T</sup>(y<sup>(i)</sup>y<sup>(j)</sup>k<sub>i,j</sub>)<sub>i,j</sub> + cΣ<sub>i</sub>(ξ<sub>i</sub>)
+Minimise<sub>(α, θ, ξ)</sub>  
+              <sup>1</sup>/<sub>2</sub>α<sup>T</sup>(y<sup>(i)</sup>y<sup>(j)</sup>k<sub>i, j</sub>)<sub>i, j</sub> + cΣ<sub>i</sub>(ξ<sub>i</sub>)
 Subject to:  
-              y<sup>(i)</sup>(Σ<sub>j</sub>(α<sub>j</sub>y<sup>(j)</sup>k(x<sup>(i)</sup>,x<sup>(j)</sup>)) - θ) ≥ 1 - ξ<sub>i</sub>
+              y<sup>(i)</sup>(Σ<sub>j</sub>(α<sub>j</sub>y<sup>(j)</sup>k(x<sup>(i)</sup>, x<sup>(j)</sup>)) - θ) ≥ 1 - ξ<sub>i</sub>
 And:  
               ξ<sub>i</sub> ≥ 0
 </pre>
@@ -70,26 +70,26 @@ And:
 <b>Pre-condition:</b>  
 If k is <i>symmetric:</i>   
 <pre>k(u, v) = k(v, u)</pre>
-,<i>non-negative definite</i>:  
+, <i>non-negative definite</i>:  
 ![non-negative definite kernel] (https://upload.wikimedia.org/math/7/9/e/79e0f0a14643312d46347a004e688ef7.png)  
-for all finite sequences of points x<sub>1,...,</sub> x<sub>n</sub> of [a, b] and all choices of real numbers c<sub>1,...,</sub> c<sub>n</sub>  
+for all finite sequences of points x<sub>1, ..., </sub> x<sub>n</sub> of [a, b] and all choices of real numbers c<sub>1, ..., </sub> c<sub>n</sub>  
 <b>Post-condition:</b>  
-<pre>⇒ ∃ φ s.t. k(u,v)=φ(u)·(v)</pre>
+<pre>⇒ ∃ φ s.t. k(u, v) = φ(u)·(v)</pre>
 
 <b>Examples:</b>  
 Identity Kernel:
-<pre> k(u,v)=u·v</pre>  
+<pre> k(u, v) = u·v</pre>  
 * takes O(n) work in n-space  
 
-<pre> k(u,v) = (u·v)<sup>2</sup>
+<pre> k(u, v) = (u·v)<sup>2</sup>
 
           = (Σ<sub>k</sub>(u<sub>k</sub>v<sub>k</sub>))<sup>2</sup>
           
           = (Σ<sub>k</sub>(u<sub>k</sub>v<sub>k</sub>))(Σ<sub>k<sup>'</sup></sub>(u<sub>k<sup>'</sup></sub>v<sub>k<sup>'</sup></sub>))
           
-          = Σ<sub>k,k<sup>'</sup></sub>(u<sub>k</sub>u<sub>k<sup>'</sup></sub>)(v<sub>k</sub>v<sub>k<sup>'</sup></sub>)
+          = Σ<sub>k, k<sup>'</sup></sub>(u<sub>k</sub>u<sub>k<sup>'</sup></sub>)(v<sub>k</sub>v<sub>k<sup>'</sup></sub>)
           
-          = Σ<sub>k,k<sup>'</sup></sub>φ(u)<sub>k,k<sup>'</sup></sub>φ(v)<sub>k,k<sup>'</sup></sub>
+          = Σ<sub>k, k<sup>'</sup></sub>φ(u)<sub>k, k<sup>'</sup></sub>φ(v)<sub>k, k<sup>'</sup></sub>
 
 </pre>
 
@@ -105,16 +105,16 @@ where x and y are vectors in the input space and c ≥ 0 is a free parameter tra
 * No arguments about which kernel function to use as you can always use them both (add them up)
 Example:  
 
-<pre> k(u,v) = (u·v + 1)<sup>2</sup>
+<pre> k(u, v) = (u·v + 1)<sup>2</sup>
 
         = (Σ<sub>k</sub>u<sub>k</sub>v<sub>k</sub> + 1)(Σ<sub>k<sup>'</sup></sub>u<sub>k<sup>'</sup></sub>v<sub>k<sup>'</sup></sub> + 1)
         
-        = Σ<sub>k,k<sup>'</sup></sub>u<sub>k</sub>u<sub>k<sup>'</sup></sub>v<sub>k</sub>v<sub>k<sup>'</sup></sub> + 2Σ<sub>k</sub>u<sub>k</sub>v<sub>k</sub> + 1
+        = Σ<sub>k, k<sup>'</sup></sub>u<sub>k</sub>u<sub>k<sup>'</sup></sub>v<sub>k</sub>v<sub>k<sup>'</sup></sub> + 2Σ<sub>k</sub>u<sub>k</sub>v<sub>k</sub> + 1
 </pre>     
 
 ##Gaussian Process
 * <b>Gaussian Kernel</b>:  
-<pre>k(u,v) = e<sup>-d|u-v|<sup>2</sup></sup></pre>
+<pre>k(u, v) = e<sup>-d|u-v|<sup>2</sup></sup></pre>
 * Can be used to compute similarities between images
 * Fee for using this: maps to infinite dimensions
 
@@ -128,7 +128,7 @@ When we want to embed SVM in your system (sneeze function in camera):
 <pre>ω·φ(x)⩼ θ
 
 Σ(α<sub>i</sub>y<sup>(i)</sup>φ(x<sup>(i)</sup>)·φ(x))
-=Σ<sub>(s.t. α<sub>i</sub>≠0)</sub>(α<sub>i</sub>y<sup>(i)</sup>k(x<sup>(i)</sup>,x))
+=Σ<sub>(s.t. α<sub>i</sub>≠0)</sub>(α<sub>i</sub>y<sup>(i)</sup>k(x<sup>(i)</sup>, x))
 
 most α<sub>i</sub> are zero!
 </pre>
