@@ -1,7 +1,7 @@
 Intro: Previously on CS401...
 ======
 
-Machine Learning theorists have a probabilistic perspective. Previously we have looked at probabistic algorithms such as:
+Machine Learning theorists have a probabilistic perspective. Previously we have looked at probabilistic algorithms such as:
 
 * Bayes rule
     * P(A|B) = P(B|A) P(A) / P(B)
@@ -11,7 +11,7 @@ Machine Learning theorists have a probabilistic perspective. Previously we have 
 * Back propagation
     * calculates the gradient of a loss function with respect to all the weights in the network.
 
-Now: Probabalistic Estimation With Confidence Interval
+Now: Probabilistic Estimation with Confidence Interval
 ======
 
 ## Augmenting the backpropagation network
