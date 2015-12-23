@@ -15,7 +15,7 @@ stochastic gradient
 https://www.youtube.com/user/stanfordhelicopter
 
 Transcription from Lecture
-----------------------------------------------
+--------------------------
 Machine Learning Tree
 =====================
 <Include machine learning tree>
