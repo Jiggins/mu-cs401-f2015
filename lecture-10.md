@@ -90,7 +90,6 @@ Identity Kernel:
           = Σ<sub>k, k<sup>'</sup></sub>(u<sub>k</sub>u<sub>k<sup>'</sup></sub>)(v<sub>k</sub>v<sub>k<sup>'</sup></sub>)
           
           = Σ<sub>k, k<sup>'</sup></sub>φ(u)<sub>k, k<sup>'</sup></sub>φ(v)<sub>k, k<sup>'</sup></sub>
-
 </pre>
 
 ###Polynomial Kernel
