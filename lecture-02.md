@@ -67,7 +67,6 @@ In a neuron, the maximum spiking rate is 1kHz. This rate is only seen in a dying
 
 Why don’t we use chemical reactions like this in computers? Cause its slow!
 
-
 ## How to adjust the weights on the machine?
 
 We can change 2 things, the weight or the threshold. 
