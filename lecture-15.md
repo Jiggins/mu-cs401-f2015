@@ -1,5 +1,5 @@
 Intro: Previously on CS401...
-======
+=============================
 
 Machine Learning theorists have a probabilistic perspective. Previously we have looked at probabilistic algorithms such as:
 
@@ -12,7 +12,7 @@ Machine Learning theorists have a probabilistic perspective. Previously we have 
     * calculates the gradient of a loss function with respect to all the weights in the network.
 
 Now: Probabilistic Estimation with Confidence Interval
-======
+======================================================
 
 ## Augmenting the backpropagation network
 
