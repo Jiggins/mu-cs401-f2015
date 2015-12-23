@@ -1,5 +1,5 @@
 Coupled Hidden Markov Model
-=============
+===========================
 
 <HMM image>
 
@@ -9,7 +9,7 @@ No efficient algorithm is known for the Coupled HMM,
 there is known algorithms for single HMM
 
 Multiscale Quadtree
-=============
+===================
 
 -Images have multiscale properties, i.e. the statically probability of the distribution remains the same when viewing the image when zoomed in or viewing it full sized.
 
@@ -95,7 +95,7 @@ P (y | x)
 table for directed model
 
 Energy Model
-=============
+============
 
 Pxy
 P00 = 0.45
