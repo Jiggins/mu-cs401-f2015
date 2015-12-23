@@ -6,7 +6,6 @@ Notes
 Unsupervised Learning
 #### Clustering
 
-
 [Linear vector quantization](https://en.wikipedia.org/wiki/Learning_vector_quantization) (LVQ) aka k-means
 
 Example.
