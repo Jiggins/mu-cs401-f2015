@@ -1,8 +1,8 @@
 CS401 Machine Learning & Neural Networks
-=======================
+========================================
  
 Three main types of Machine Learning
--------------------------------
+------------------------------------
 
 * Supervised Learning (regression)
 * Unsupervised Learning (figure out structure, data mining)
