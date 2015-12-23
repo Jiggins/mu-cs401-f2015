@@ -7,7 +7,6 @@ The Error function in machine learning is the analogue to Energy in Physics.
 Gradient descent in physical terms is like a table wobbling or a pendulum swinging. When the table is deformed there is a restoring force pushing back. Or it is like a pendulum when it is pushed there is a restoring force proportional to the distance it was moved from the point of minimum energy. 
 It is not an abrupt transition like letting a table falling. 
 
-
 ## 1 Dimensional situation
 We have for a pendulum:
 F(x) = - c*x, where F is the force on the pendulum, x is the distance for minimum energy position. 
@@ -33,7 +32,6 @@ dw/dt = - η ∇<sub>w</sub>E.
 This formula corresponds to a particle going downhill with no momentum (the particle would be said to be in a highly viscous medium)
 
 The steps taken in finding the gradient above are very small, which from a computational point of view is very bad. What we want to do is to take as large of steps as possible.
-
 
 ### How big of a step can we take?
 For a 1 Dimension system:
