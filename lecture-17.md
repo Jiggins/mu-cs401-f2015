@@ -54,3 +54,4 @@ let α be a configuration of the visible states and β be a configuration of hid
 We want to calculate: 
 
 <!-- Some formulas go here -->
+ 
