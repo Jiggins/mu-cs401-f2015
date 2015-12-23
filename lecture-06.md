@@ -130,7 +130,6 @@ One criticism of this style of learning:
 
 * Doesn't handle elements not in data set very well
 
-
 #Training vs. testing (sets)
 
 ![Training vs. Testing] (http://i.stack.imgur.com/I7LiT.png)
