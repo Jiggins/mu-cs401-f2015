@@ -2,24 +2,24 @@
 
 ## Winnow
 
-https://en.wikipedia.org/wiki/Winnow_(algorithm)
+[Winnow Algorithm](https://en.wikipedia.org/wiki/Winnow_(algorithm))
 
 ## Strong Learnability
 
 ### Probably Approximately Correct (PAC)
 
-https://en.wikipedia.org/wiki/Probably_approximately_correct_learning
+[Probably approximately correct learning](https://en.wikipedia.org/wiki/Probably_approximately_correct_learning)
 
 Almost certainly generalizes really well
 
 ## Weak Learning
 
-Has a slight chance of generalizing slighly better than chance.
+Has a slight chance of generalizing slightly better than chance.
 
 ## Boosting
 
-https://en.wikipedia.org/wiki/Boosting_(machine_learning)
+[Boosting](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
 
-### ADAboost
+### AdaBoost
 
-https://en.wikipedia.org/wiki/AdaBoost
+[AdaBoost](https://en.wikipedia.org/wiki/AdaBoost)
