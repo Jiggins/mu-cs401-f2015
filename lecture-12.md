@@ -60,3 +60,4 @@ The machine has three inner machines, each of which will produce a data point th
 Using K-means, we want to look at this data set and find out which points were created by which machine.
 
 We will look at K-means further in Lecture 13.
+ 
