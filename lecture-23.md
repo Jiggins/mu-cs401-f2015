@@ -4,14 +4,14 @@ https://en.wikipedia.org/wiki/Reinforcement_learning
 
 In supervised learning we have assumed that there is a target output value for each input value. However, in many situations, there is less detailed information available. In extreme situations, there is only a single bit of information after a long sequence of inputs telling whether the output is right or wrong. Reinforcement learning is one method developed to deal with such situations.
 
-Reinforcement learning is an area of machine learning concerned with how software agents ought to take actions in an environment (world) so as to maximize some notion of cumulative reward. The agent (for example, it could be a robot of some sort) has to try and figure out the world and perform actions in order to get rewards (and minimise any penalties). Actions one performs now may effect the state of the world, and therefore any actions in the future as well. Reinforcement learning differs from standard supervised learning in that correct input/output pairs are never presented, nor sub-optimal actions explicitly corrected. Further, there is a focus on on-line performance, which involves finding a balance between exploration (of uncharted territory) and exploitation (of current knowledge). This is known as the exploration vs. exploitation trade-off.
+Reinforcement learning is an area of machine learning concerned with how software agents ought to take actions in an environment (world) so as to maximize some notion of cumulative reward. The agent (for example, it could be a robot of some sort) has to try and figure out the world and perform actions in order to get rewards (and minimise any penalties). Actions one performs now may affect the state of the world, and therefore any actions in the future as well. Reinforcement learning differs from standard supervised learning in that correct input/output pairs are never presented, nor sub-optimal actions explicitly corrected. Further, there is a focus on on-line performance, which involves finding a balance between exploration (of uncharted territory) and exploitation (of current knowledge). This is known as the exploration vs. exploitation trade-off.
 
 The basic reinforcement learning model consists of:
 
 1. a set of environment states S;
 2. a set of actions A;
 3. rules of transitioning between states;
-4. rules that determine the  reward of a transition
+4. rules that determine the reward of a transition
 5. rules that describe what the agent observes.
 
 A policy pi maps a State to an Action -> pi : S -> A
@@ -50,7 +50,7 @@ https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume4/kaelbling96a-html/rl-surv
 
 https://en.wikipedia.org/wiki/Markov_decision_process
 
-Markov decision processes (MDPs) provide a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker. MDPs are useful for studying a wide range of optimization problems solved via reinforcement learning. 
+Markov decision processes (MDPs) provide a mathematical framework for modelling decision making in situations where outcomes are partly random and partly under the control of a decision maker. MDPs are useful for studying a wide range of optimization problems solved via reinforcement learning. 
 
 Value iteration and Policy iteration are two notable variants of MDPs. 
 
