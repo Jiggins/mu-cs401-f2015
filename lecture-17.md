@@ -1,5 +1,5 @@
 How to sample a Graphical Model
-==========
+===============================
 
 The Product-Sum algorithm is an algorithm for computing for sampling a graphical model. It works well if the graph has a tree like structure, but in other situations it isn't. It is sometimes called a message passing algorithm. 
 
@@ -18,7 +18,7 @@ The Product-Sum algorithm is an algorithm for computing for sampling a graphical
 
 
 Problems
---------------------
+--------
 With a tree graph, the product-sum algorithm will converge. However with a chain of loop like structure old information will get amplified. If chains are long or there is some sort of attenuation this is not really important, but if the chains are short the probabilities you get will be wrong. 
 Tree structure: 
 ![tree graph](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/tree.png)
@@ -26,7 +26,7 @@ chain structure
 ![cahin graph](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/chain.png)
 
 [Boltzmann Machine](https://en.wikipedia.org/wiki/Boltzmann_machine)
-================
+====================================================================
 *Problem* Given the structure and lots of samples from Graphical models, can we figure out the relationships between them? This is a learning problem. 
 ![boltzmann_machine](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/boltzman_machine.png)
 
