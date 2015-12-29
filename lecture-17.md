@@ -12,18 +12,18 @@ The Product-Sum algorithm is an algorithm for computing for sampling a graphical
 
 *In Practice* We have made some observations (e.g. characters) and we want to figure out the marginal probabilities in the graphical model (e.g. the word someone was trying to type). Finding the full joint distribution is too hard of problem for graphical models 
 
-* We associate a function f(x<sub>i</sub>, x<sub>j</sub>) with the factor between x_<sub>i</sub> and x<sub>j</sub>.
-* Hence we can say P(x<sub>i</sub>,...x<sub>n</sub>)= &#928;<sub>j</sub> f  <sub>j</sub>(x<sub>a(j)</sub>,x<sub>b(j)</sub>).
+* We associate a function f(x<sub>i</sub>, x<sub>j</sub>) with the factor between x<sub>i</sub> and x<sub>j</sub>.
+* Hence we can say P(x<sub>i</sub>, ..., x<sub>n</sub>) = &#928;<sub>j</sub>f<sub>j</sub>(x<sub>a(j)</sub>, x<sub>b(j)</sub>).
 * Update the factors with a message called v. v is a message from a variable x<sub>n</sub> to x<sub>m</sub> and it represents the conditional probability P(x<sub>m</sub>| all the children of n)
 
 
 Problems
 --------
-With a tree graph, the product-sum algorithm will converge. However with a chain of loop like structure old information will get amplified. If chains are long or there is some sort of attenuation this is not really important, but if the chains are short the probabilities you get will be wrong. 
+With a tree graph, the product-sum algorithm will converge. However, with a chain of loop like structure old information will get amplified. If chains are long or there is some sort of attenuation this is not really important, but if the chains are short the probabilities you get will be wrong. 
 Tree structure: 
 ![tree graph](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/tree.png)
 chain structure
-![cahin graph](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/chain.png)
+![chain graph](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/chain.png)
 
 [Boltzmann Machine](https://en.wikipedia.org/wiki/Boltzmann_machine)
 ====================================================================
@@ -39,9 +39,9 @@ P(α) is proportional to e<sup>-Eα/t</sup>
 
 Pick s<sub>i</sub> and consider it changing its state. 
 
-Calculate E<sub>si=1</sub> and E<sub>si=0</sub>
+Calculate E<sub>si = 1</sub> and E<sub>si = 0</sub>
 
-<!-- Some formulas go here  --> 
+<!-- Some formulas go here --> 
 ![formula for probability](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/prob-1.png)
 ![delta E](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/deltaE-1.png)
 
@@ -62,6 +62,5 @@ let α be a configuration of the visible states and β be a configuration of hid
 ![formula for G](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/formula-1.png)
 
 We want to calculate: 
-
 
 ![formula for derivative of G](https://raw.githubusercontent.com/barak/mu-cs401-f2015/master/images/lecture-17/formula2-1.png)
