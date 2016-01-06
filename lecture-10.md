@@ -8,7 +8,7 @@ When there is mislabelled data; a hyperplane is introduced to cleanly split data
 * Problem based on linear classification  
 Margin is straightforward to calculate in linear case but not when the problem's non-linear:
 
-![Non-linear margin] (http://www.blaenkdenum.com/images/notes/machine-learning/support-vector-machines/x-space-non-linear-svm.png)
+![Non-linear margin](http://www.blaenkdenum.com/images/notes/machine-learning/support-vector-machines/x-space-non-linear-svm.png)
 
 ##Kernel Trick
 * Map observations to a higher dimensional space using a <b>Kernel Function</b>:  
@@ -70,9 +70,9 @@ And:
 <b>Pre-condition:</b>  
 If k is <i>symmetric:</i>   
 <pre>k(u, v) = k(v, u)</pre>
-, <i>non-negative definite</i>:  
-![non-negative definite kernel] (https://upload.wikimedia.org/math/7/9/e/79e0f0a14643312d46347a004e688ef7.png)  
-for all finite sequences of points x<sub>1, ..., </sub> x<sub>n</sub> of [a, b] and all choices of real numbers c<sub>1, ..., </sub> c<sub>n</sub>  
+,<i>non-negative definite</i>:  
+![non-negative definite kernel](https://upload.wikimedia.org/math/7/9/e/79e0f0a14643312d46347a004e688ef7.png)  
+for all finite sequences of points x<sub>1,...,</sub> x<sub>n</sub> of [a, b] and all choices of real numbers c<sub>1,...,</sub> c<sub>n</sub>  
 <b>Post-condition:</b>  
 <pre>⇒ ∃ φ s.t. k(u, v) = φ(u)·(v)</pre>
 
@@ -94,7 +94,7 @@ Identity Kernel:
 
 ###Polynomial Kernel
 For degree-d polynomials, the polynomial kernel is defined as:  
-![polynomial kernel] (https://upload.wikimedia.org/math/e/0/e/e0e6e2ac260502f8818fb8c55cec2227.png)  
+![polynomial kernel](https://upload.wikimedia.org/math/e/0/e/e0e6e2ac260502f8818fb8c55cec2227.png)  
 where x and y are vectors in the input space and c ≥ 0 is a free parameter trading off the influence of higher-order versus lower-order terms in the polynomial.
 
 <pre>φ: ℝ<sup>n</sup>⟼ ℝ<sup>n<sup>p</sup>/≈p!</sup></pre>
