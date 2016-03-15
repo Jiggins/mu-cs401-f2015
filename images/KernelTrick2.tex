@@ -1,0 +1,17 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\begin{document}
+\begin{align*}K(u,v) & = (u \cdot v)^2 + u \cdot v \\
+       & = \sum_k u_k \cdot v_k \cdot \sum_{k'} u_{k'} \cdot v_{k'} \\
+       & = \sum_{k \cdot k'} (u_k \cdot u_{k'})(v_k \cdot u_{k'}) \\
+       & = \sum_{k \cdot k'} \phi(u)_{k,k'} \cdot \phi(v)_{k,k'}
+\\
+\\
+\\
+K(u,v) & = (u \cdot v + 1)^2  \\
+       & = (\sum_k u_k \cdot u_{k'} + 1)(\sum_{k'} v_k \cdot u_{k'} + 1) \\
+       & = \sum_{k \cdot k'} u_k u_{k'} , v_k v_{k'} + 2\sum_k u_kv_k + 1\end{align*}
+\end{document}
